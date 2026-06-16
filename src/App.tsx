@@ -107,7 +107,11 @@ export default function App() {
             <div className="flex items-center space-x-4 sm:space-x-6">
               <a href="tel:+17864603922" className="flex items-center space-x-1.5 hover:text-brand-orange transition-colors">
                 <Phone className="w-3.5 h-3.5 text-brand-orange" />
-                <span className={`font-medium transition-colors duration-300 ${isScrolled ? 'text-gray-700' : 'text-white/80'}`}>Número gratuito USA: <span className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-brand-charcoal' : 'text-white'}`}>+1 (786) 460-3922</span></span>
+                <span className={`font-medium transition-colors duration-300 ${isScrolled ? 'text-gray-700' : 'text-white/80'}`}>
+                  <span className="hidden sm:inline">Número gratuito USA: </span>
+                  <span className="inline sm:hidden">Tel: </span>
+                  <span className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-brand-charcoal' : 'text-white'}`}>+1 (786) 460-3922</span>
+                </span>
               </a>
               <span className={`hidden sm:inline transition-colors duration-300 ${isScrolled ? 'text-black/10' : 'text-white/20'}`}>|</span>
               <a href="mailto:info@peruinsideout.com" className="hidden sm:flex items-center space-x-1.5 hover:text-brand-orange transition-colors">
@@ -126,9 +130,10 @@ export default function App() {
                 href="https://wa.me/51962708155" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`font-bold text-[10px] sm:text-xs tracking-wider uppercase px-4 py-2 shadow-md transition-all duration-300 inline-block shrink-0 rounded-xs ${isScrolled ? 'bg-brand-orange hover:bg-brand-orange-dark text-white' : 'bg-white hover:bg-gray-100 text-brand-charcoal'}`}
+                className={`font-bold text-[10px] sm:text-xs tracking-wider uppercase px-3 sm:px-4 py-2 shadow-md transition-all duration-300 inline-block shrink-0 rounded-xs ${isScrolled ? 'bg-brand-orange hover:bg-brand-orange-dark text-white' : 'bg-white hover:bg-gray-100 text-brand-charcoal'}`}
               >
-                Asesoría gratuita de expertos
+                <span className="hidden sm:inline">Asesoría gratuita de expertos</span>
+                <span className="inline sm:hidden">Asesoría Gratis</span>
               </a>
             </div>
           </div>
@@ -408,7 +413,7 @@ export default function App() {
                 <div>
                   <button 
                     onClick={() => setMobileSudamericaOpen(!mobileSudamericaOpen)} 
-                    className="hover:text-white w-full text-left flex items-center justify-between py-2 border-b border-white/5 focus:outline-none text-brand-orange"
+                    className="hover:text-white w-full text-left flex items-center justify-between py-2 border-b border-white/5 focus:outline-none"
                   >
                     <span>Viaje en Sudamérica</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileSudamericaOpen ? 'rotate-180' : ''}`} />
@@ -582,12 +587,12 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-4">
             
             {/* Stats on the left */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 w-full lg:w-auto">
+            <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-x-6 sm:gap-x-8 gap-y-3.5 w-full lg:w-auto">
               
               {/* Stat 1 */}
-              <div className="flex items-center space-x-3 text-left">
-                <span className="text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">21K+</span>
-                <div className="text-[11px] sm:text-[12px] text-gray-600 font-semibold leading-tight select-none">
+              <div className="flex items-center space-x-2.5 text-left">
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">21K+</span>
+                <div className="text-[10px] sm:text-[11px] lg:text-[12px] text-gray-600 font-semibold leading-tight select-none">
                   <div>Clientes</div>
                   <div>felices</div>
                 </div>
@@ -597,9 +602,9 @@ export default function App() {
               <div className="hidden sm:block text-xl lg:text-2xl font-light text-brand-orange">|</div>
 
               {/* Stat 2 */}
-              <div className="flex items-center space-x-3 text-left">
-                <span className="text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">1,5K+</span>
-                <div className="text-[11px] sm:text-[12px] text-gray-600 font-semibold leading-tight select-none">
+              <div className="flex items-center space-x-2.5 text-left">
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">1,5K+</span>
+                <div className="text-[10px] sm:text-[11px] lg:text-[12px] text-gray-600 font-semibold leading-tight select-none">
                   <div>Reseñas de</div>
                   <div>5 estrellas</div>
                 </div>
@@ -609,9 +614,9 @@ export default function App() {
               <div className="hidden sm:block text-xl lg:text-2xl font-light text-brand-orange">|</div>
 
               {/* Stat 3 */}
-              <div className="flex items-center space-x-3 text-left">
-                <span className="text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">96%</span>
-                <div className="text-[11px] sm:text-[12px] text-gray-600 font-semibold leading-tight select-none">
+              <div className="flex items-center space-x-2.5 text-left">
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">96%</span>
+                <div className="text-[10px] sm:text-[11px] lg:text-[12px] text-gray-600 font-semibold leading-tight select-none">
                   <div>Calificación</div>
                   <div>de</div>
                   <div>excelencia</div>
