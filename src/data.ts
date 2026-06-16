@@ -2,88 +2,94 @@ import { Tour, FAQItem, Testimonial } from './types';
 
 export const TOURS_DATA: Tour[] = [
   {
-    id: 'joyas-andinas',
-    title: 'Joyas Andinas & Machu Picchu',
-    subtitle: 'El circuito clásico redefinido con accesos especiales y ritmo pausado',
-    duration: '9 Días / 8 Noches',
-    rating: 4.95,
-    reviewCount: 420,
-    priceUSD: 1980,
-    image: 'https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=800',
-    category: 'classicos',
+    id: 'tour-autentico-8d',
+    title: 'Tour Auténtico por Perú en 8 Días',
+    subtitle: 'Inmersión Cultural',
+    duration: '8 días',
+    rating: 4.98,
+    reviewCount: 245,
+    priceUSD: 1919,
+    image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=800',
+    category: 'cultural',
     isFeatured: true,
-    highlights: ['Boleto prioritario Machu Picchu', 'Valle Sagrado VIP', 'Hospedajes boutique históricos', 'Guías locales especializados'],
-    difficulty: 'Fácil'
+    highlights: ['Cusco Colonial', 'Valle Sagrado', 'Machu Picchu Express', 'Lima Histórica'],
+    difficulty: 'Fácil',
+    location: 'Lima, Cusco, Valle Sagrado & Machu Picchu'
   },
   {
-    id: 'andes-selva',
-    title: 'Andes Místicos & Selva del Tambopata',
-    subtitle: 'De las alturas imperiales a la biodiversidad del Amazonas virgen',
-    duration: '12 Días / 11 Noches',
+    id: 'aventura-peru-9d',
+    title: 'Aventura en Perú',
+    subtitle: 'Naturaleza, aventura y paisajes inolvidables en los Andes',
+    duration: '9 días',
+    rating: 4.95,
+    reviewCount: 188,
+    priceUSD: 2299,
+    image: 'https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=800',
+    category: 'aventura',
+    isFeatured: true,
+    highlights: ['Cusco', 'Valle Sagrado', 'Camino Inca', 'Montaña de Colores'],
+    difficulty: 'Moderado',
+    location: 'Cusco, Valle Sagrado, Camino Inca & Montaña de Colores'
+  },
+  {
+    id: 'gastronomico-peru-8d',
+    title: 'Tour Gastronómico por Perú en 8...',
+    subtitle: 'Viaje Gourmet por Lima y Cusco',
+    duration: '8 días',
+    rating: 4.97,
+    reviewCount: 156,
+    priceUSD: 1989,
+    image: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&w=800',
+    category: 'cultural',
+    isFeatured: true,
+    highlights: ['Clases culinarias en Lima', 'Cevichería tradicional', 'Cena de degustación Cusco', 'San Pedro'],
+    difficulty: 'Fácil',
+    location: 'Lima, Cusco, Valle Sagrado & Machu Picchu'
+  },
+  {
+    id: 'peru-descubierto-10d',
+    title: 'Perú al Descubierto',
+    subtitle: 'De la Costa al Amazonas & Machu Picchu',
+    duration: '10 días',
     rating: 4.93,
-    reviewCount: 185,
-    priceUSD: 2640,
+    reviewCount: 212,
+    priceUSD: 2219,
     image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800',
     category: 'aventura',
     isFeatured: true,
-    highlights: ['Eco-lodges con certificación verde', 'Caminata nocturna por el Amazonas', 'Machu Picchu al amanecer', 'Avistamiento de guacamayos'],
-    difficulty: 'Moderado'
+    highlights: ['Reserva Tambopata', 'Eco-Lodge en Amazonas', 'Cusco', 'Machu Picchu'],
+    difficulty: 'Moderado',
+    location: 'Lima, Puerto Maldonado, Cusco & Machu Picchu'
   },
   {
-    id: 'gran-ruta-incas',
-    title: 'La Gran Ruta del Imperio Inca',
-    subtitle: 'La inmersión total: de los templos de Cusco al sagrado Lago Titicaca',
-    duration: '14 Días / 13 Noches',
+    id: 'peru-highlights-16d',
+    title: 'Tour Perú Highlights 16 Días',
+    subtitle: 'El Gran Viaje por el Sur del Perú',
+    duration: '16 días',
     rating: 4.96,
-    reviewCount: 312,
-    priceUSD: 2890,
+    reviewCount: 389,
+    priceUSD: 3249,
     image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=800',
-    category: 'cultural',
-    isFeatured: true,
-    highlights: ['Isla Taquile con familias locales', 'Tren de lujo Titicaca Explorer', 'Salineras de Maras privadas', 'Ceremonia de pago a la Pachamama'],
-    difficulty: 'Moderado'
-  },
-  {
-    id: 'cusco-express',
-    title: 'Cusco Imperial & Valle Sagrado Premium',
-    subtitle: 'Los tesoros fundamentales de los Incas con máximo confort',
-    duration: '6 Días / 5 Noches',
-    rating: 4.89,
-    reviewCount: 154,
-    priceUSD: 1450,
-    image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=800',
     category: 'classicos',
-    isFeatured: false,
-    highlights: ['Visita vespertina a Sacsayhuamán', 'Mirador de Chinchero', 'Cena degustación alta cocina', 'Tren Vistadome 360°'],
-    difficulty: 'Fácil'
+    isFeatured: true,
+    highlights: ['Arequipa Colonial', 'Lago Titicaca', 'Canyon de Colca', 'Cusco', 'Machu Picchu'],
+    difficulty: 'Moderado',
+    location: 'Lima, Cusco, Arequipa, Lago Titicaca, Amazonas...'
   },
   {
-    id: 'ausangate-trek',
-    title: 'Ausangate & Montaña del Arcoíris',
-    subtitle: 'Un desafío alpino en el corazón espiritual de la Cordillera Vilcanota',
-    duration: '5 Días / 4 Noches',
-    rating: 4.91,
-    reviewCount: 98,
-    priceUSD: 920,
-    image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800',
-    category: 'aventura',
-    isFeatured: false,
-    highlights: ['Camping de lujo con calefacción', 'Arrieros y caballos locales', 'Paso de montaña a 5,000m', 'Montaña Palccoyo (sin multitudes)'],
-    difficulty: 'Desafiante'
-  },
-  {
-    id: 'sabores-desierto',
-    title: 'Sabores, Dunas & Enigmas del Sur',
-    subtitle: 'Vanguardia gastronómica en Lima y misticismo en el desierto de Ica',
-    duration: '7 Días / 6 Noches',
+    id: 'maravillas-peru-9d',
+    title: 'Maravillas del Perú',
+    subtitle: 'Un Recorrido por Historia, Cultura y Naturaleza',
+    duration: '9 días',
     rating: 4.94,
-    reviewCount: 204,
-    priceUSD: 1780,
+    reviewCount: 177,
+    priceUSD: 1979,
     image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800',
-    category: 'cultural',
-    isFeatured: false,
-    highlights: ['Clase privada con chef de renombre', 'Sobrevuelo Líneas de Nazca', 'Sandboard o picnic en oasis de Ica', 'Reserva Nacional de Paracas'],
-    difficulty: 'Fácil'
+    category: 'classicos',
+    isFeatured: true,
+    highlights: ['Oasis de Huacachina', 'Sobrevuelo Nazca', 'Uros Lake Titicaca', 'Machu Picchu Tour'],
+    difficulty: 'Fácil',
+    location: 'Machu Picchu, Lago Titicaca y Huacachina'
   }
 ];
 
@@ -123,27 +129,37 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 export const FAQ_DATA: FAQItem[] = [
   {
     id: 'faq-1',
-    question: '¿Qué diferencia a Perú InsideOut de los grandes operadores internacionales?',
-    answer: 'Somos un operador de especialidad con presencia e infraestructura propia en Lima, Cusco y Arequipa. En lugar de subcontratar y revender, operamos directamente todos nuestros traslados, contratos con guías y convenios de alojamiento, lo que nos permite un control milimétrico del confort de tu viaje y asistencia local real las 24 horas del día.'
+    question: '¿Qué hace que los tours de Exploor Peru sean únicos?',
+    answer: 'Combinamos precisión y calidad de servicio con la hospitalidad peruana para diseñar tours 100% personalizados y privados. Nuestra filosofía principal es "Beat the Crowds" (evitar las multitudes), planificando itinerarios estratégicos para que visites Machu Picchu y otros atractivos principales en horarios de menor afluencia con guías locales apasionados.'
   },
   {
     id: 'faq-2',
-    question: '¿Cómo gestionan el mal de altura (soroche) en el altiplano?',
-    answer: 'Nuestros itinerarios están optimizados médicamente para un ascenso gradual. Preferimos comenzar hospedándote en el Valle Sagrado (2,800m), que tiene menor altitud que la ciudad de Cusco (3,400m), para permitir que tu cuerpo se aclimate sin síntomas molestos mientras disfrutas de hermosos valles templados.'
+    question: '¿Qué destinos puedo visitar con Exploor Peru?',
+    answer: 'Operamos en todo el territorio peruano. Puedes explorar la costa (Lima, Paracas, Nazca), los Andes (Cusco, Valle Sagrado, Machu Picchu, Arequipa, Cañón del Colca, Lago Titicaca) y la selva amazónica (Tambopata, Iquitos), así como extensiones combinadas a Bolivia (Salar de Uyuni) y las Islas Galápagos.'
   },
   {
     id: 'faq-3',
-    question: '¿Puedo iniciar el viaje en cualquier fecha y personalizarlo?',
-    answer: 'Completamente. Al no operar con salidas fijas grupales masivas, todos nuestros itinerarios se diseñan a tu medida desde cero. Tú decides la fecha exacta de inicio, los días de duración, el tipo de comida y la categoría de hotel. Tu itinerario de principio a fin es de uso exclusivo privado.'
+    question: '¿Puedo personalizar mi itinerario de viaje en Perú?',
+    answer: '¡Totalmente! Cada viaje que diseñamos es único y a medida. Tú decides la fecha de inicio, la duración, las actividades preferidas y la categoría de hotel. Nuestro equipo adaptará todo el itinerario para que se ajuste exactamente a tus sueños y ritmo de viaje.'
   },
   {
     id: 'faq-4',
-    question: '¿Cómo garantizan evitar las aglomeraciones del turismo de masa?',
-    answer: 'La clave está en la sintonía horaria y senderos alternativos. Conocemos los flujos de los grandes buses turísticos y programamos las visitas de nuestros viajeros en los horarios valle. Además, organizamos inmersiones en comunidades que no reciben turismo de masa y caminatas exclusivas autorizadas por guías nativos.'
+    question: '¿Cuál es la mejor época para viajar por Perú?',
+    answer: 'Depende de las regiones que visites. Para los Andes (Cusco, Machu Picchu) y el Amazonas, la temporada seca (de mayo a octubre) es excelente para el turismo y senderismo. Para la costa limeña y las playas del norte, la mejor época es el verano austral (de diciembre a abril).'
   },
   {
     id: 'faq-5',
-    question: '¿Qué políticas de reembolso y cancelación flexible manejan?',
-    answer: 'Ofrecemos la opción de reservar con un anticipo reembolsable y reprogramaciones sin penalización hasta 35 días antes del inicio de tu viaje. Entendemos que las circunstancias globales pueden variar, por lo que actuamos como aliados flexibles y directos del viajero.'
+    question: '¿Es seguro Perú para viajeros solos o primerizos?',
+    answer: 'Sí, Perú es un destino muy acogedor y seguro para el turismo si se toman precauciones estándar. Al viajar con nosotros, cuentas con asistencia de emergencia las 24 horas del día, los 7 días de la semana, traslados privados con conductores verificados y guías certificados en cada destino.'
+  },
+  {
+    id: 'faq-6',
+    question: '¿Los guías de Exploor Peru son locales y certificados?',
+    answer: 'Absolutamente. Todos nuestros guías son profesionales locales certificados, apasionados por su historia y cultura. Te brindarán no solo datos arqueológicos precisos, sino también una inmersión humana genuina en las costumbres y relatos de cada comunidad.'
+  },
+  {
+    id: 'faq-7',
+    question: '¿Cómo reservo un tour con Exploor Peru?',
+    answer: 'Es muy simple. Solo debes completar nuestro formulario de contacto o escribirnos directamente a WhatsApp. Un especialista se comunicará contigo en 24 horas para co-diseñar un itinerario borrador de cortesía. Una vez que estés de acuerdo con los detalles y hoteles, procedemos a realizar la reserva oficial.'
   }
 ];

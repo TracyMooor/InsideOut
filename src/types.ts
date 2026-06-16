@@ -11,6 +11,7 @@ export interface Tour {
   isFeatured?: boolean;
   highlights: string[];
   difficulty: 'Fácil' | 'Moderado' | 'Desafiante';
+  location: string;
 }
 
 export interface FAQItem {
