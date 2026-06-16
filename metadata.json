@@ -1,0 +1,6 @@
+{
+  "name": "Perú InsideOut",
+  "description": "Operador local experto de especialidad y concierge de viajes a medida en Perú. Itinerarios de lujo, aventura sostenible e inmersiones culturales auténticas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
