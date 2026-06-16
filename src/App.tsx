@@ -49,6 +49,9 @@ export default function App() {
 
   // Mobile menu control
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobilePeruOpen, setMobilePeruOpen] = useState(false);
+  const [mobileSudamericaOpen, setMobileSudamericaOpen] = useState(false);
+  const [mobileQuienesSomosOpen, setMobileQuienesSomosOpen] = useState(false);
 
   // Active filter category for tours
   const [activeTourCategory, setActiveTourCategory] = useState<string>('all');
@@ -158,15 +161,181 @@ export default function App() {
 
           {/* DESKTOP NAV */}
           <nav className={`hidden md:flex items-center space-x-6 lg:space-x-8 text-xs font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-brand-charcoal/80' : 'text-white/90'}`} id="desktop-navigation">
-            <a href="#tours" className="hover:text-brand-orange transition-colors duration-200">Trip Finder</a>
-            <a href="#contacto" className="hover:text-brand-orange transition-colors duration-200">Tours personalizados</a>
-            <div className="relative group cursor-pointer flex items-center space-x-1 hover:text-brand-orange transition-colors duration-200">
-              <span>Paquetes</span>
-              <ChevronDown className="w-3.5 h-3.5" />
+            <div className="relative group flex items-center h-full py-4">
+              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-brand-orange transition-colors duration-200 flex items-center space-x-1">
+                <span>Viaje en Perú</span>
+                <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
+              </a>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute top-[80%] left-0 w-72 bg-white text-brand-charcoal shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 p-6 border-t-2 border-[#571224] border-x border-b border-black/[0.06] select-none">
+                <div className="space-y-6">
+                  {/* Category 1 */}
+                  <div>
+                    <h4 className="text-[10px] tracking-widest font-extrabold text-[#571224] uppercase mb-3 text-left">
+                      Viaje en Perú
+                    </h4>
+                    <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20viaje%20a%20la%20medida%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Viaje a la medida en Perù
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20tour%20por%20la%20Amazonía%20del%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Tour por la Amazonia del Perù
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20trekking%20tour%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Trekking Tours al Perù
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Category 2 */}
+                  <div>
+                    <h4 className="text-[10px] tracking-widest font-extrabold text-[#571224] uppercase mb-3 text-left">
+                      Informaciones Útiles
+                    </h4>
+                    <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Antiguo%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Antiguo Perù
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Imperio%20Inca" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          El Imperio Inca
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Perú%20moderno" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Perù moderno
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20recomendaciones%20de%20restaurantes%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Restaurants
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <a href="#tours" className="hover:text-brand-orange transition-colors duration-200">Peru & Galapagos</a>
-            <a href="#tours" className="hover:text-brand-orange transition-colors duration-200">Peru & Bolivia</a>
-            <a href="#lecturas" className="hover:text-brand-orange transition-colors duration-200">Blog</a>
+            <div className="relative group flex items-center h-full py-4">
+              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-brand-orange transition-colors duration-200 flex items-center space-x-1">
+                <span>Viaje en Sudamérica</span>
+                <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
+              </a>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute top-[80%] left-0 w-72 bg-white text-brand-charcoal shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 p-6 border-t-2 border-[#571224] border-x border-b border-black/[0.06] select-none">
+                <div className="space-y-6">
+                  {/* Category 1 */}
+                  <div>
+                    <h4 className="text-[10px] tracking-widest font-extrabold text-[#571224] uppercase mb-3 text-left">
+                      Viaje en Sudamérica
+                    </h4>
+                    <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Chile" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Viajes en Chile
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Bolivia" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Viajes en Bolivia
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Ecuador" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Viajes en Ecuador
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Colombia" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Viajes en Colombia
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Argentina" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Viajes en Argentina
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-brand-orange transition-colors duration-200">Destinos</a>
+            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-brand-orange transition-colors duration-200">Oferta Especial</a>
+            <div className="relative group flex items-center h-full py-4">
+              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-brand-orange transition-colors duration-200 flex items-center space-x-1">
+                <span>Quienes Somos</span>
+                <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
+              </a>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute top-[80%] right-0 w-72 bg-white text-brand-charcoal shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 p-6 border-t-2 border-[#571224] border-x border-b border-black/[0.06] select-none">
+                <div className="space-y-6">
+                  {/* Category 1 */}
+                  <div>
+                    <h4 className="text-[10px] tracking-widest font-extrabold text-[#571224] uppercase mb-3 text-left">
+                      Quienes Somos
+                    </h4>
+                    <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
+                      <li>
+                        <a href="#historia" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Nuestra Historia
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20turismo%20responsable%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Turismo responsable en Peru
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20saber%20lo%20que%20hablan%20de%20nosotros" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Hablan de nosotros
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#trust-milestones" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Testimonios
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#lecturas" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Blog
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Category 2 */}
+                  <div>
+                    <h4 className="text-[10px] tracking-widest font-extrabold text-[#571224] uppercase mb-3 text-left">
+                      Contacto
+                    </h4>
+                    <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
+                      <li>
+                        <a href="#contacto" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Contacto
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://wa.me/51962708155?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                          Reservas
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </nav>
 
           {/* MOBILE MENU TRIGGER */}
@@ -192,48 +361,141 @@ export default function App() {
               id="mobile-menu-panel"
             >
               <nav className="flex flex-col space-y-4 font-bold text-xs tracking-widest uppercase text-gray-300">
+                <div>
+                  <button 
+                    onClick={() => setMobilePeruOpen(!mobilePeruOpen)} 
+                    className="hover:text-white w-full text-left flex items-center justify-between py-2 border-b border-white/5 focus:outline-none"
+                  >
+                    <span>Viaje en Perú</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobilePeruOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {mobilePeruOpen && (
+                    <div className="pl-4 py-2 space-y-4 bg-black/10 mt-1 rounded-xs">
+                      <div className="space-y-2">
+                        <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
+                          Viaje en Perú
+                        </span>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20viaje%20a%20la%20medida%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Viaje a la medida en Perù
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20tour%20por%20la%20Amazonía%20del%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Tour por la Amazonia del Perù
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20trekking%20tour%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Trekking Tours al Perù
+                        </a>
+                      </div>
+                      <div className="space-y-2 pt-2 border-t border-white/5">
+                        <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
+                          Informaciones Útiles
+                        </span>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Antiguo%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Antiguo Perù
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Imperio%20Inca" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          El Imperio Inca
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Perú%20moderno" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Perù moderno
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20recomendaciones%20de%20restaurantes%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Restaurants
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <button 
+                    onClick={() => setMobileSudamericaOpen(!mobileSudamericaOpen)} 
+                    className="hover:text-white w-full text-left flex items-center justify-between py-2 border-b border-white/5 focus:outline-none text-brand-orange"
+                  >
+                    <span>Viaje en Sudamérica</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileSudamericaOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {mobileSudamericaOpen && (
+                    <div className="pl-4 py-2 space-y-4 bg-black/10 mt-1 rounded-xs">
+                      <div className="space-y-2">
+                        <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
+                          Viaje en Sudamérica
+                        </span>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Chile" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Viajes en Chile
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Bolivia" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Viajes en Bolivia
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Ecuador" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Viajes en Ecuador
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Colombia" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Viajes en Colombia
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Argentina" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Viajes en Argentina
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </div>
                 <a 
-                  href="#tours" 
-                  onClick={() => setMobileMenuOpen(false)} 
+                  href="#" 
+                  onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); }} 
                   className="hover:text-white block py-2 border-b border-white/5"
                 >
-                  Trip Finder
+                  Destinos
                 </a>
                 <a 
-                  href="#contacto" 
-                  onClick={() => setMobileMenuOpen(false)} 
-                  className="hover:text-white block py-2 border-b border-white/5 text-brand-orange"
-                >
-                  Tours personalizados
-                </a>
-                <a 
-                  href="#tours" 
-                  onClick={() => setMobileMenuOpen(false)} 
+                  href="#" 
+                  onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); }} 
                   className="hover:text-white block py-2 border-b border-white/5"
                 >
-                  Paquetes
+                  Oferta Especial
                 </a>
-                <a 
-                  href="#tours" 
-                  onClick={() => setMobileMenuOpen(false)} 
-                  className="hover:text-white block py-2 border-b border-white/5"
-                >
-                  Peru & Galapagos
-                </a>
-                <a 
-                  href="#tours" 
-                  onClick={() => setMobileMenuOpen(false)} 
-                  className="hover:text-white block py-2 border-b border-white/5"
-                >
-                  Peru & Bolivia
-                </a>
-                <a 
-                  href="#lecturas" 
-                  onClick={() => setMobileMenuOpen(false)} 
-                  className="hover:text-white block py-2 border-b border-white/5"
-                >
-                  Blog
-                </a>
+                <div>
+                  <button 
+                    onClick={() => setMobileQuienesSomosOpen(!mobileQuienesSomosOpen)} 
+                    className="hover:text-white w-full text-left flex items-center justify-between py-2 border-b border-white/5 focus:outline-none"
+                  >
+                    <span>Quienes Somos</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileQuienesSomosOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {mobileQuienesSomosOpen && (
+                    <div className="pl-4 py-2 space-y-4 bg-black/10 mt-1 rounded-xs">
+                      <div className="space-y-2">
+                        <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
+                          Quienes Somos
+                        </span>
+                        <a href="#historia" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Nuestra Historia
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20turismo%20responsable%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Turismo responsable en Peru
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20saber%20lo%20que%20hablan%20de%20nosotros" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Hablan de nosotros
+                        </a>
+                        <a href="#trust-milestones" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Testimonios
+                        </a>
+                        <a href="#lecturas" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Blog
+                        </a>
+                      </div>
+                      <div className="space-y-2 pt-2 border-t border-white/5">
+                        <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
+                          Contacto
+                        </span>
+                        <a href="#contacto" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Contacto
+                        </a>
+                        <a href="https://wa.me/51962708155?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                          Reservas
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </nav>
               <div className="pt-2 flex flex-col space-y-3">
                 <a 
@@ -259,17 +521,13 @@ export default function App() {
 
       {/* 2. HERO SECTION */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden" id="hero-section">
-        {/* Cinematic high-quality background picture of Machu Picchu (Andean Warm Vignette) */}
+        {/* Cinematic high-quality background picture of Machu Picchu */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-103 motion-safe:animate-[pulse_10s_ease-in-out_infinite]"
           style={{ 
-            backgroundImage: "url('https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2024/10/machu-picchu-turistas-vista-panoramica-full.jpg')" 
+            backgroundImage: "url('https://andinoperu.b-cdn.net/wp-content/uploads/2024/03/razones-para-visitar-machu-picchu.webp')" 
           }}
         ></div>
-        
-        {/* Soft elegant gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/50 to-brand-charcoal/20"></div>
-        <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/80 to-transparent"></div>
 
         {/* Content Wrapper */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center text-white pt-24 pb-20">
