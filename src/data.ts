@@ -129,12 +129,12 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 export const FAQ_DATA: FAQItem[] = [
   {
     id: 'faq-1',
-    question: '¿Qué hace que los tours de Exploor Peru sean únicos?',
+    question: '¿Qué hace que los tours de Perú InsideOut sean únicos?',
     answer: 'Combinamos precisión y calidad de servicio con la hospitalidad peruana para diseñar tours 100% personalizados y privados. Nuestra filosofía principal es "Beat the Crowds" (evitar las multitudes), planificando itinerarios estratégicos para que visites Machu Picchu y otros atractivos principales en horarios de menor afluencia con guías locales apasionados.'
   },
   {
     id: 'faq-2',
-    question: '¿Qué destinos puedo visitar con Exploor Peru?',
+    question: '¿Qué destinos puedo visitar con Perú InsideOut?',
     answer: 'Operamos en todo el territorio peruano. Puedes explorar la costa (Lima, Paracas, Nazca), los Andes (Cusco, Valle Sagrado, Machu Picchu, Arequipa, Cañón del Colca, Lago Titicaca) y la selva amazónica (Tambopata, Iquitos), así como extensiones combinadas a Bolivia (Salar de Uyuni) y las Islas Galápagos.'
   },
   {
@@ -154,12 +154,12 @@ export const FAQ_DATA: FAQItem[] = [
   },
   {
     id: 'faq-6',
-    question: '¿Los guías de Exploor Peru son locales y certificados?',
+    question: '¿Los guías de Perú InsideOut son locales y certificados?',
     answer: 'Absolutamente. Todos nuestros guías son profesionales locales certificados, apasionados por su historia y cultura. Te brindarán no solo datos arqueológicos precisos, sino también una inmersión humana genuina en las costumbres y relatos de cada comunidad.'
   },
   {
     id: 'faq-7',
-    question: '¿Cómo reservo un tour con Exploor Peru?',
+    question: '¿Cómo reservo un tour con Perú InsideOut?',
     answer: 'Es muy simple. Solo debes completar nuestro formulario de contacto o escribirnos directamente a WhatsApp. Un especialista se comunicará contigo en 24 horas para co-diseñar un itinerario borrador de cortesía. Una vez que estés de acuerdo con los detalles y hoteles, procedemos a realizar la reserva oficial.'
   }
 ];

@@ -520,23 +520,27 @@ export default function App() {
       </header>
 
       {/* 2. HERO SECTION */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden" id="hero-section">
+      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden" id="hero-section">
         {/* Cinematic high-quality background picture of Machu Picchu */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-103 motion-safe:animate-[pulse_10s_ease-in-out_infinite]"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
             backgroundImage: "url('https://andinoperu.b-cdn.net/wp-content/uploads/2024/03/razones-para-visitar-machu-picchu.webp')" 
           }}
         ></div>
 
+        {/* Soft elegant gradient overlays: Left-to-right on desktop to keep the right side (tourists/landscape) 100% visible and natural */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent hidden md:block"></div>
+        <div className="absolute inset-0 bg-black/35 md:hidden"></div>
+
         {/* Content Wrapper */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center text-white pt-24 pb-20">
+        <div className="relative z-10 flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left text-white pt-32 pb-8 flex flex-col justify-center items-center md:items-start w-full">
           
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold leading-[1.15] tracking-tight mb-6 max-w-4xl mx-auto"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-extrabold leading-[1.15] tracking-tight mb-6 max-w-2xl text-center md:text-left"
           >
             ¿Listos para el viaje de su vida a Perú?
           </motion.h1>
@@ -545,7 +549,7 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-150 font-medium leading-relaxed mb-10"
+            className="max-w-xl text-sm sm:text-base md:text-lg text-gray-200 font-medium leading-relaxed mb-10 text-center md:text-left"
           >
             Descubran el auténtico Perú, sin multitudes.
           </motion.p>
@@ -554,122 +558,107 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto"
+            className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 w-full max-w-md"
           >
             <a 
               href="#tours" 
-              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-sm font-bold tracking-wider px-8 py-4 shadow-xl transition-all duration-300 rounded-none border border-transparent"
+              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-xs font-bold tracking-wider px-8 py-3.5 shadow-xl transition-all duration-300 rounded-none border border-transparent text-center"
               id="hero-primary-cta"
             >
               Ver Peru Tours
             </a>
             <a 
               href="#contacto" 
-              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-sm font-bold tracking-wider px-8 py-4 shadow-xl transition-all duration-300 rounded-none border border-transparent"
+              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-xs font-bold tracking-wider px-8 py-3.5 shadow-xl transition-all duration-300 rounded-none border border-transparent text-center"
               id="hero-secondary-cta"
             >
               Personaliza mi viaje
             </a>
           </motion.div>
         </div>
-      </section>
 
-      {/* 3. TRUST BANNER (Stats & Tripadvisor Awards) */}
-      <section className="bg-[#eae8e2] border-b border-black/[0.04] py-4 sm:py-5 relative z-20" id="trust-milestones">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-6">
-          
-          {/* Stats on the left */}
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 w-full lg:w-auto">
+        {/* 3. TRUST BANNER (Stats & Tripadvisor Awards) inside Hero bottom wrapper */}
+        <div className="bg-[#eae8e2] border-t border-black/[0.04] py-3 sm:py-4 relative z-20 w-full" id="trust-milestones">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-4">
             
-            {/* Stat 1 */}
-            <div className="flex items-center space-x-3 text-left">
-              <span className="text-4xl lg:text-5xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">21K+</span>
-              <div className="text-[12px] sm:text-[13px] text-gray-600 font-semibold leading-tight select-none">
-                <div>Clientes</div>
-                <div>felices</div>
+            {/* Stats on the left */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 w-full lg:w-auto">
+              
+              {/* Stat 1 */}
+              <div className="flex items-center space-x-3 text-left">
+                <span className="text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">21K+</span>
+                <div className="text-[11px] sm:text-[12px] text-gray-600 font-semibold leading-tight select-none">
+                  <div>Clientes</div>
+                  <div>felices</div>
+                </div>
               </div>
+
+              {/* Separator */}
+              <div className="hidden sm:block text-xl lg:text-2xl font-light text-brand-orange">|</div>
+
+              {/* Stat 2 */}
+              <div className="flex items-center space-x-3 text-left">
+                <span className="text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">1,5K+</span>
+                <div className="text-[11px] sm:text-[12px] text-gray-600 font-semibold leading-tight select-none">
+                  <div>Reseñas de</div>
+                  <div>5 estrellas</div>
+                </div>
+              </div>
+
+              {/* Separator */}
+              <div className="hidden sm:block text-xl lg:text-2xl font-light text-brand-orange">|</div>
+
+              {/* Stat 3 */}
+              <div className="flex items-center space-x-3 text-left">
+                <span className="text-3xl lg:text-4xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">96%</span>
+                <div className="text-[11px] sm:text-[12px] text-gray-600 font-semibold leading-tight select-none">
+                  <div>Calificación</div>
+                  <div>de</div>
+                  <div>excelencia</div>
+                </div>
+              </div>
+
             </div>
 
-            {/* Separator */}
-            <div className="hidden sm:block text-2xl lg:text-3xl font-light text-brand-orange">|</div>
-
-            {/* Stat 2 */}
-            <div className="flex items-center space-x-3 text-left">
-              <span className="text-4xl lg:text-5xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">1,5K+</span>
-              <div className="text-[12px] sm:text-[13px] text-gray-600 font-semibold leading-tight select-none">
-                <div>Reseñas de</div>
-                <div>5 estrellas</div>
-              </div>
-            </div>
-
-            {/* Separator */}
-            <div className="hidden sm:block text-2xl lg:text-3xl font-light text-brand-orange">|</div>
-
-            {/* Stat 3 */}
-            <div className="flex items-center space-x-3 text-left">
-              <span className="text-4xl lg:text-5xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">96%</span>
-              <div className="text-[12px] sm:text-[13px] text-gray-600 font-semibold leading-tight select-none">
-                <div>Calificación</div>
-                <div>de</div>
-                <div>excelencia</div>
-              </div>
+            {/* Tripadvisor Awards on the right */}
+            <div className="flex items-center justify-center lg:justify-end gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar w-full lg:w-auto py-0.5">
+              {[2022, 2023, 2024, 2025, 2026].map((year) => (
+                <div key={year} className="flex flex-col items-center text-center shrink-0 w-[64px] sm:w-[70px] select-none">
+                  <span className="text-[8px] sm:text-[9px] text-black font-extrabold leading-none tracking-tight">Tripadvisor</span>
+                  <span className="text-[7px] sm:text-[8px] text-gray-800 font-medium leading-none tracking-tighter mt-[1px]">Travelers'</span>
+                  <span className="text-[7px] sm:text-[8px] text-gray-800 font-medium leading-none tracking-tighter">Choice Awards</span>
+                  
+                  {/* Tripadvisor custom laurel wreath & owl SVG */}
+                  <svg className="w-11 h-11 text-black my-0.5" viewBox="0 0 100 100" fill="currentColor">
+                    <defs>
+                      <g id={`branch-${year}`}>
+                        <path d="M 50 82 C 34 81 24 67 24 50 C 24 41 27 33 33 27" fill="none" stroke="black" strokeWidth="2.5" strokeLinecap="round" />
+                        <path d="M 44 80 Q 34 82 32 76 Q 38 73 44 80 Z" />
+                        <path d="M 37 74 Q 26 77 24 70 Q 31 66 37 74 Z" />
+                        <path d="M 31 66 Q 20 69 18 61 Q 25 58 31 66 Z" />
+                        <path d="M 27 57 Q 16 58 15 50 Q 22 49 27 57 Z" />
+                        <path d="M 25 47 Q 15 47 15 39 Q 22 40 25 47 Z" />
+                        <path d="M 26 37 Q 18 34 20 26 Q 25 30 26 37 Z" />
+                        <path d="M 29 28 Q 23 22 27 15 Q 30 21 29 28 Z" />
+                      </g>
+                    </defs>
+                    <use href={`#branch-${year}`} />
+                    <use href={`#branch-${year}`} transform="translate(100, 0) scale(-1, 1)" />
+                    <circle cx="50" cy="48" r="17" fill="none" stroke="black" strokeWidth="3" />
+                    <circle cx="44.5" cy="48" r="5" fill="white" stroke="black" strokeWidth="1.8" />
+                    <circle cx="44.5" cy="48" r="2.5" fill="black" />
+                    <circle cx="55.5" cy="48" r="5" fill="white" stroke="black" strokeWidth="1.8" />
+                    <circle cx="55.5" cy="48" r="2.5" fill="black" />
+                    <path d="M 38 42.5 Q 44.5 39 50 42.5 Q 55.5 39 62 42.5" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 48.5 49 L 51.5 49 L 50 53 Z" fill="black" />
+                  </svg>
+                  
+                  <span className="text-[8px] sm:text-[9px] text-black font-extrabold leading-none tracking-tight mt-0.5">{year}</span>
+                </div>
+              ))}
             </div>
 
           </div>
-
-          {/* Tripadvisor Awards on the right */}
-          <div className="flex items-center justify-center lg:justify-end gap-2 sm:gap-3 overflow-x-auto no-scrollbar w-full lg:w-auto py-1">
-            {[2022, 2023, 2024, 2025, 2026].map((year) => (
-              <div key={year} className="flex flex-col items-center text-center shrink-0 w-[72px] sm:w-[78px] select-none">
-                <span className="text-[9px] sm:text-[10px] text-black font-extrabold leading-none tracking-tight">Tripadvisor</span>
-                <span className="text-[8px] sm:text-[9px] text-gray-800 font-medium leading-none tracking-tighter mt-[1px]">Travelers'</span>
-                <span className="text-[8px] sm:text-[9px] text-gray-800 font-medium leading-none tracking-tighter">Choice Awards</span>
-                
-                {/* Tripadvisor custom laurel wreath & owl SVG */}
-                <svg className="w-14 h-14 text-black my-1" viewBox="0 0 100 100" fill="currentColor">
-                  <defs>
-                    <g id={`branch-${year}`}>
-                      {/* Curved stem */}
-                      <path d="M 50 82 C 34 81 24 67 24 50 C 24 41 27 33 33 27" fill="none" stroke="black" strokeWidth="2.5" strokeLinecap="round" />
-                      {/* Leaves along the stem */}
-                      <path d="M 44 80 Q 34 82 32 76 Q 38 73 44 80 Z" />
-                      <path d="M 37 74 Q 26 77 24 70 Q 31 66 37 74 Z" />
-                      <path d="M 31 66 Q 20 69 18 61 Q 25 58 31 66 Z" />
-                      <path d="M 27 57 Q 16 58 15 50 Q 22 49 27 57 Z" />
-                      <path d="M 25 47 Q 15 47 15 39 Q 22 40 25 47 Z" />
-                      <path d="M 26 37 Q 18 34 20 26 Q 25 30 26 37 Z" />
-                      <path d="M 29 28 Q 23 22 27 15 Q 30 21 29 28 Z" />
-                    </g>
-                  </defs>
-                  {/* Left Branch */}
-                  <use href={`#branch-${year}`} />
-                  {/* Right Branch (flipped horizontally) */}
-                  <use href={`#branch-${year}`} transform="translate(100, 0) scale(-1, 1)" />
-                  
-                  {/* Inner Circle */}
-                  <circle cx="50" cy="48" r="17" fill="none" stroke="black" strokeWidth="3" />
-                  
-                  {/* Owl Head inside */}
-                  {/* Left Eye */}
-                  <circle cx="44.5" cy="48" r="5" fill="white" stroke="black" strokeWidth="1.8" />
-                  <circle cx="44.5" cy="48" r="2.5" fill="black" />
-                  
-                  {/* Right Eye */}
-                  <circle cx="55.5" cy="48" r="5" fill="white" stroke="black" strokeWidth="1.8" />
-                  <circle cx="55.5" cy="48" r="2.5" fill="black" />
-                  
-                  {/* Brow */}
-                  <path d="M 38 42.5 Q 44.5 39 50 42.5 Q 55.5 39 62 42.5" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" />
-                  
-                  {/* Beak */}
-                  <path d="M 48.5 49 L 51.5 49 L 50 53 Z" fill="black" />
-                </svg>
-                
-                <span className="text-[9px] sm:text-[10px] text-black font-extrabold leading-none tracking-tight mt-0.5">{year}</span>
-              </div>
-            ))}
-          </div>
-
         </div>
       </section>
 
@@ -1065,7 +1054,7 @@ export default function App() {
               <div className="inline-flex items-center space-x-1 bg-[#00af87] text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">
                 <span>Tripadvisor</span>
               </div>
-              <span className="text-gray-400">exploor</span>
+              <span className="text-gray-400">Perú InsideOut</span>
               <div className="flex items-center space-x-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <span key={i} className="w-2.5 h-2.5 rounded-full bg-[#00af87] inline-block"></span>
@@ -1203,7 +1192,7 @@ export default function App() {
               ¿Necesitan ayuda? Contáctennos:
             </h4>
             <p className="text-xs text-gray-600 font-light">
-              <span className="font-bold text-brand-charcoal">info@exploor.pe</span> | Número gratuito de USA <span className="font-bold text-brand-charcoal">+1 (786) 460-3922</span>
+              <span className="font-bold text-brand-charcoal">info@peruinsideout.com</span> | Número gratuito de USA <span className="font-bold text-brand-charcoal">+1 (786) 460-3922</span>
             </p>
           </div>
 
@@ -1265,7 +1254,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 11. FOOTER IN EXPLOOR LIGHT STYLE */}
+      {/* 11. FOOTER IN PERU INSIDEOUT LIGHT STYLE */}
       <footer className="bg-white text-brand-charcoal pt-16 pb-8 border-t border-black/[0.06] font-sans" id="main-footer">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -1275,7 +1264,7 @@ export default function App() {
             <div className="space-y-2">
               <h4 className="text-sm font-bold uppercase tracking-wider text-brand-charcoal">Correo</h4>
               <p className="text-xs text-gray-600 hover:text-brand-orange transition-colors">
-                <a href="mailto:info@exploor.pe">info@exploor.pe</a>
+                <a href="mailto:info@peruinsideout.com">info@peruinsideout.com</a>
               </p>
             </div>
             {/* Teléfono */}
@@ -1342,7 +1331,7 @@ export default function App() {
                 <li><a href="#historia" className="hover:text-brand-orange transition-colors">Quiénes Somos</a></li>
                 <li><a href="#tours" className="hover:text-brand-orange transition-colors">Destinos</a></li>
                 <li><a href="#metodo" className="hover:text-brand-orange transition-colors normal-case">Sostenibilidad y Turismo Responsable en Perú</a></li>
-                <li><a href="#historia" className="hover:text-brand-orange transition-colors normal-case">Proyecto Social de Exploor Peru</a></li>
+                <li><a href="#historia" className="hover:text-brand-orange transition-colors normal-case">Proyecto Social de Perú InsideOut</a></li>
               </ul>
             </div>
             {/* Column 2: General */}
@@ -1463,7 +1452,7 @@ export default function App() {
           {/* Bottom Copyright bar */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-black/[0.06] pt-6 mt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500">
             <p className="text-center md:text-left font-light select-none">
-              &copy; Copyright {new Date().getFullYear()} Exploor
+              &copy; Copyright {new Date().getFullYear()} Perú InsideOut
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0 font-medium font-sans uppercase tracking-wider text-[10px]">
               <a href="#" className="hover:text-brand-orange transition">Políticas de Privacidad</a>
