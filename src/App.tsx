@@ -105,12 +105,12 @@ export default function App() {
             
             {/* Left side: phone & email */}
             <div className="flex items-center space-x-4 sm:space-x-6">
-              <a href="tel:+17864603922" className="flex items-center space-x-1.5 hover:text-brand-orange transition-colors">
+              <a href="tel:+11111111111" className="flex items-center space-x-1.5 hover:text-brand-orange transition-colors">
                 <Phone className="w-3.5 h-3.5 text-brand-orange" />
                 <span className={`font-medium transition-colors duration-300 ${isScrolled ? 'text-gray-700' : 'text-white/80'}`}>
                   <span className="hidden sm:inline">Número gratuito USA: </span>
                   <span className="inline sm:hidden">Tel: </span>
-                  <span className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-brand-charcoal' : 'text-white'}`}>+1 (786) 460-3922</span>
+                  <span className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-brand-charcoal' : 'text-white'}`}>+1 (111) 111-1111</span>
                 </span>
               </a>
               <span className={`hidden sm:inline transition-colors duration-300 ${isScrolled ? 'text-black/10' : 'text-white/20'}`}>|</span>
@@ -127,7 +127,7 @@ export default function App() {
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform group-hover:rotate-180 ${isScrolled ? 'text-brand-charcoal' : 'text-white'}`} />
               </div>
               <a 
-                href="https://wa.me/51962708155" 
+                href="https://wa.me/51999999999" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`font-bold text-[10px] sm:text-xs tracking-wider uppercase px-3 sm:px-4 py-2 shadow-md transition-all duration-300 inline-block shrink-0 rounded-xs ${isScrolled ? 'bg-brand-orange hover:bg-brand-orange-dark text-white' : 'bg-white hover:bg-gray-100 text-brand-charcoal'}`}
@@ -182,17 +182,17 @@ export default function App() {
                     </h4>
                     <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20viaje%20a%20la%20medida%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20un%20viaje%20a%20la%20medida%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Viaje a la medida en Perù
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20tour%20por%20la%20Amazonía%20del%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20un%20tour%20por%20la%20Amazonía%20del%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Tour por la Amazonia del Perù
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20trekking%20tour%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20un%20trekking%20tour%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Trekking Tours al Perù
                         </a>
                       </li>
@@ -206,22 +206,22 @@ export default function App() {
                     </h4>
                     <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Antiguo%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Antiguo%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Antiguo Perù
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Imperio%20Inca" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Imperio%20Inca" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           El Imperio Inca
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Perú%20moderno" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Perú%20moderno" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Perù moderno
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20recomendaciones%20de%20restaurantes%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20recomendaciones%20de%20restaurantes%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Restaurants
                         </a>
                       </li>
@@ -246,27 +246,27 @@ export default function App() {
                     </h4>
                     <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Chile" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Chile" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Viajes en Chile
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Bolivia" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Bolivia" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Viajes en Bolivia
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Ecuador" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Ecuador" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Viajes en Ecuador
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Colombia" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Colombia" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Viajes en Colombia
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Argentina" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Argentina" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Viajes en Argentina
                         </a>
                       </li>
@@ -298,12 +298,12 @@ export default function App() {
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20turismo%20responsable%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20turismo%20responsable%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Turismo responsable en Peru
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20saber%20lo%20que%20hablan%20de%20nosotros" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20saber%20lo%20que%20hablan%20de%20nosotros" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Hablan de nosotros
                         </a>
                       </li>
@@ -332,7 +332,7 @@ export default function App() {
                         </a>
                       </li>
                       <li>
-                        <a href="https://wa.me/51962708155?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
+                        <a href="https://wa.me/51999999999?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
                           Reservas
                         </a>
                       </li>
@@ -380,13 +380,13 @@ export default function App() {
                         <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
                           Viaje en Perú
                         </span>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20viaje%20a%20la%20medida%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20un%20viaje%20a%20la%20medida%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Viaje a la medida en Perù
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20tour%20por%20la%20Amazonía%20del%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20un%20tour%20por%20la%20Amazonía%20del%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Tour por la Amazonia del Perù
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesa%20un%20trekking%20tour%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesa%20un%20trekking%20tour%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Trekking Tours al Perù
                         </a>
                       </div>
@@ -394,16 +394,16 @@ export default function App() {
                         <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
                           Informaciones Útiles
                         </span>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Antiguo%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Antiguo%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Antiguo Perù
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Imperio%20Inca" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Imperio%20Inca" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           El Imperio Inca
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Perú%20moderno" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20información%20sobre%20el%20Perú%20moderno" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Perù moderno
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20recomendaciones%20de%20restaurantes%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20recomendaciones%20de%20restaurantes%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Restaurants
                         </a>
                       </div>
@@ -424,19 +424,19 @@ export default function App() {
                         <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
                           Viaje en Sudamérica
                         </span>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Chile" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Chile" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Viajes en Chile
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Bolivia" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Bolivia" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Viajes en Bolivia
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Ecuador" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Ecuador" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Viajes en Ecuador
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Colombia" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Colombia" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Viajes en Colombia
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20interesan%20viajes%20en%20Argentina" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20interesan%20viajes%20en%20Argentina" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Viajes en Argentina
                         </a>
                       </div>
@@ -474,10 +474,10 @@ export default function App() {
                         <a href="#historia" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Nuestra Historia
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20turismo%20responsable%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20turismo%20responsable%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Turismo responsable en Peru
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20me%20gustaría%20saber%20lo%20que%20hablan%20de%20nosotros" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20saber%20lo%20que%20hablan%20de%20nosotros" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Hablan de nosotros
                         </a>
                         <a href="#trust-milestones" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
@@ -494,7 +494,7 @@ export default function App() {
                         <a href="#contacto" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Contacto
                         </a>
-                        <a href="https://wa.me/51962708155?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
+                        <a href="https://wa.me/51999999999?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
                           Reservas
                         </a>
                       </div>
@@ -511,7 +511,7 @@ export default function App() {
                   Diseñar Itinerario Gratis
                 </a>
                 <a 
-                  href="https://wa.me/51962708155" 
+                  href="https://wa.me/51999999999" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="border border-white/20 text-white py-3 rounded-sm text-xs font-bold uppercase tracking-widest text-center flex items-center justify-center space-x-2"
@@ -813,7 +813,7 @@ export default function App() {
                   
                   {/* Ver más CTA Button */}
                   <a 
-                    href={`https://wa.me/51962708155?text=Hola%20Perú%20InsideOut,%20me%20interesa%20el%20tour:%20${encodeURIComponent(tour.title)}`}
+                    href={`https://wa.me/51999999999?text=Hola%20Perú%20InsideOut,%20me%20interesa%20el%20tour:%20${encodeURIComponent(tour.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 transition-colors duration-200 w-fit text-center cursor-pointer"
@@ -828,7 +828,7 @@ export default function App() {
           {/* Centered Button at the bottom of the section */}
           <div className="mt-12 text-center">
             <a 
-              href="https://wa.me/51962708155"
+              href="https://wa.me/51999999999"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 transition-colors duration-200"
@@ -872,7 +872,7 @@ export default function App() {
             {/* Button */}
             <div>
               <a 
-                href="https://wa.me/51962708155"
+                href="https://wa.me/51999999999"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-8 py-3.5 transition-colors duration-200"
@@ -951,7 +951,7 @@ export default function App() {
                 </div>
                 <div className="pt-3">
                   <a 
-                    href="https://wa.me/51962708155?text=Hola%20Perú%20InsideOut,%20me%20gustaría%20saber%20más%20sobre%20las%2011%20cosas%20que%20debo%20saber%20antes%20de%20viajar" 
+                    href="https://wa.me/51999999999?text=Hola%20Perú%20InsideOut,%20me%20gustaría%20saber%20más%20sobre%20las%2011%20cosas%20que%20debo%20saber%20antes%20de%20viajar" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-sky-600 hover:text-sky-800 font-semibold text-xs hover:underline"
@@ -982,7 +982,7 @@ export default function App() {
                 </div>
                 <div className="pt-3">
                   <a 
-                    href="https://wa.me/51962708155?text=Hola%20Perú%20InsideOut,%20quiero%20información%20y%20consejos%20sobre%20cómo%20manejar%20el%20mal%20de%20altura" 
+                    href="https://wa.me/51999999999?text=Hola%20Perú%20InsideOut,%20quiero%20información%20y%20consejos%20sobre%20cómo%20manejar%20el%20mal%20de%20altura" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-sky-600 hover:text-sky-800 font-semibold text-xs hover:underline"
@@ -1013,7 +1013,7 @@ export default function App() {
                 </div>
                 <div className="pt-3">
                   <a 
-                    href="https://wa.me/51962708155?text=Hola%20Perú%20InsideOut,%20me%20interesa%20obtener%20la%20lista%20de%20empaque%20completa%20para%20el%20viaje" 
+                    href="https://wa.me/51999999999?text=Hola%20Perú%20InsideOut,%20me%20interesa%20obtener%20la%20lista%20de%20empaque%20completa%20para%20el%20viaje" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-sky-600 hover:text-sky-800 font-semibold text-xs hover:underline"
@@ -1029,7 +1029,7 @@ export default function App() {
           {/* Botón Ver más blogs */}
           <div className="text-center">
             <a 
-              href="https://wa.me/51962708155" 
+              href="https://wa.me/51999999999" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 transition-colors duration-200"
@@ -1197,7 +1197,7 @@ export default function App() {
               ¿Necesitan ayuda? Contáctennos:
             </h4>
             <p className="text-xs text-gray-600 font-light">
-              <span className="font-bold text-brand-charcoal">info@peruinsideout.com</span> | Número gratuito de USA <span className="font-bold text-brand-charcoal">+1 (786) 460-3922</span>
+              <span className="font-bold text-brand-charcoal">info@peruinsideout.com</span> | Número gratuito de USA <span className="font-bold text-brand-charcoal">+1 (111) 111-1111</span>
             </p>
           </div>
 
@@ -1276,17 +1276,17 @@ export default function App() {
             <div className="space-y-1">
               <h4 className="text-sm font-bold uppercase tracking-wider text-brand-charcoal">Teléfono</h4>
               <p className="text-xs text-gray-600">
-                USA: <a href="tel:+17864603922" className="hover:text-brand-orange transition-colors">+1 (786) 460-3922</a>
+                USA: <a href="tel:+11111111111" className="hover:text-brand-orange transition-colors">+1 (111) 111-1111</a>
               </p>
               <p className="text-xs text-gray-600">
-                Peru: <a href="tel:+51932671370" className="hover:text-brand-orange transition-colors">+51 932 671 370</a>
+                Peru: <a href="tel:+51999999999" className="hover:text-brand-orange transition-colors">+51 999 999 999</a>
               </p>
             </div>
             {/* Dirección */}
             <div className="space-y-2">
               <h4 className="text-sm font-bold uppercase tracking-wider text-brand-charcoal">Dirección</h4>
               <p className="text-xs text-gray-600">
-                Calle Garcilaso 265, Cusco - Perú
+                Miraflores, Lima
               </p>
             </div>
             {/* Redes sociales */}
