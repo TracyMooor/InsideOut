@@ -168,60 +168,86 @@ export default function App() {
     <div className="min-h-screen bg-brand-cream text-brand-charcoal font-sans selection:bg-brand-terracotta selection:text-white relative">
       
       {/* 1. HEADER / NAVIGATION */}
-      <header id="header" className="sticky top-0 z-50 bg-brand-charcoal/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+      <header id="header" className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/85 via-black/50 to-transparent transition-all duration-300">
+        
+        {/* Top Info Bar */}
+        <div className="border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-[11px] sm:text-xs text-white/90">
+            
+            {/* Left side: phone & email */}
+            <div className="flex items-center space-x-4 sm:space-x-6">
+              <a href="tel:+17864603922" className="flex items-center space-x-1.5 hover:text-brand-orange transition-colors">
+                <Phone className="w-3.5 h-3.5 text-brand-orange" />
+                <span className="font-medium">Número gratuito USA: <span className="font-bold">+1 (786) 460-3922</span></span>
+              </a>
+              <span className="text-white/20 hidden sm:inline">|</span>
+              <a href="mailto:info@peruinsideout.com" className="hidden sm:flex items-center space-x-1.5 hover:text-brand-orange transition-colors">
+                <Mail className="w-3.5 h-3.5 text-brand-orange" />
+                <span className="font-medium">Correo: <span className="font-bold">info@peruinsideout.com</span></span>
+              </a>
+            </div>
+
+            {/* Right side: language & CTA box */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-1 cursor-pointer hover:text-brand-orange transition-colors group">
+                <span className="font-bold uppercase tracking-wider">ES</span>
+                <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+              </div>
+              <a 
+                href="#planner" 
+                className="bg-white hover:bg-gray-100 text-brand-charcoal font-bold text-[10px] sm:text-xs tracking-wider uppercase px-4 py-2 shadow-md transition-all duration-300 inline-block shrink-0 rounded-xs"
+              >
+                Asesoría gratuita de expertos
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Navigation Bar */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           
-          {/* LOGO: Peru InsideOut matching custom design with terracotta chevron */}
-          <a href="#" className="flex flex-col font-sans text-white tracking-widest select-none cursor-pointer group" id="logo-header">
-            <div className="flex items-baseline text-xl md:text-2xl font-extrabold tracking-[0.22em] transition-all duration-300">
+          {/* LOGO: Peru InsideOut matching custom design from screenshot */}
+          <a href="#" className="flex flex-col text-white select-none leading-none group" id="logo-header">
+            <div className="text-2xl sm:text-3xl font-extrabold tracking-[0.22em] flex items-end">
               <span>PER</span>
-              <span className="border-b-2 border-brand-terracotta pb-0.5 group-hover:border-white transition-colors">U</span>
+              <span className="relative inline-block">
+                U
+                <span className="absolute left-0 right-0 bottom-[-4px] h-[3px] bg-white group-hover:bg-brand-orange transition-colors"></span>
+              </span>
             </div>
-            <div className="flex items-center text-[10px] md:text-xs font-semibold tracking-[0.16em] mt-0.5 text-gray-300">
-              <span className="group-hover:text-brand-terracotta transition-colors">INSIDE</span>
-              <svg className="w-3 h-3 mx-1 text-brand-terracotta fill-current shrink-0 transform group-hover:rotate-180 transition-transform duration-300" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
+            <div className="text-[11px] sm:text-[13px] font-bold tracking-[0.16em] flex items-center mt-1 text-white/90">
+              <span>INSIDE</span>
+              {/* Thin arrow > */}
+              <span className="mx-1 text-[10px] sm:text-[12px] font-bold text-white/95 group-hover:translate-x-0.5 transition-transform shrink-0">&gt;</span>
               <span>O</span>
-              <span className="border-b border-brand-terracotta pb-px">U</span>
+              <span className="relative inline-block">
+                U
+                <span className="absolute left-0 right-0 bottom-[-2px] h-[2px] bg-white/90 group-hover:bg-brand-orange transition-colors"></span>
+              </span>
               <span>T</span>
             </div>
           </a>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase text-gray-300" id="desktop-navigation">
-            <a href="#tours" className="hover:text-brand-terracotta transition-colors duration-200">Rutas & Tours</a>
-            <a href="#metodo" className="hover:text-brand-terracotta transition-colors duration-200">El Método InsideOut</a>
-            <a href="#planner" className="hover:text-brand-terracotta transition-colors duration-200">Diseña Tu Viaje</a>
-            <a href="#historia" className="hover:text-brand-terracotta transition-colors duration-200">Nuestra Filosofía</a>
-            <a href="#faq" className="hover:text-brand-terracotta transition-colors duration-200">Preguntas</a>
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-xs font-bold tracking-widest uppercase text-white/90" id="desktop-navigation">
+            <a href="#tours" className="hover:text-brand-orange transition-colors duration-200">Trip Finder</a>
+            <a href="#planner" className="hover:text-brand-orange transition-colors duration-200">Tours personalizados</a>
+            <div className="relative group cursor-pointer flex items-center space-x-1 hover:text-brand-orange transition-colors duration-200">
+              <span>Paquetes</span>
+              <ChevronDown className="w-3.5 h-3.5" />
+            </div>
+            <a href="#tours" className="hover:text-brand-orange transition-colors duration-200">Peru & Galapagos</a>
+            <a href="#tours" className="hover:text-brand-orange transition-colors duration-200">Peru & Bolivia</a>
+            <div className="relative group cursor-pointer flex items-center space-x-1 hover:text-brand-orange transition-colors duration-200">
+              <span>Blog</span>
+              <ChevronDown className="w-3.5 h-3.5" />
+            </div>
           </nav>
-
-          {/* CTA & DIRECT SUPPORT */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <a 
-              href="https://wa.me/51962708155" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-xs text-gray-300 hover:text-white flex items-center space-x-2 transition"
-              id="header-whatsapp-link"
-            >
-              <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
-              <span>WhatsApp Directo</span>
-            </a>
-            <a 
-              href="#planner" 
-              className="bg-brand-terracotta hover:bg-brand-terracotta-dark text-white px-5 py-3 rounded-xs font-bold text-xs tracking-widest uppercase transition-all duration-300 shadow-md hover:shadow-brand-terracotta/25 hover:-translate-y-0.5"
-              id="header-cta-button"
-            >
-              Planificar Viaje
-            </a>
-          </div>
 
           {/* MOBILE MENU TRIGGER */}
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-            className="md:hidden text-white hover:text-brand-terracotta focus:outline-none p-2"
+            className="md:hidden text-white hover:text-brand-orange focus:outline-none p-2"
             aria-label="Toggle navigation menu"
             id="mobile-menu-trigger"
           >
@@ -246,42 +272,49 @@ export default function App() {
                   onClick={() => setMobileMenuOpen(false)} 
                   className="hover:text-white block py-2 border-b border-white/5"
                 >
-                  Rutas de Viaje
-                </a>
-                <a 
-                  href="#metodo" 
-                  onClick={() => setMobileMenuOpen(false)} 
-                  className="hover:text-white block py-2 border-b border-white/5"
-                >
-                  El Método InsideOut
+                  Trip Finder
                 </a>
                 <a 
                   href="#planner" 
                   onClick={() => setMobileMenuOpen(false)} 
-                  className="hover:text-white block py-2 border-b border-white/5 text-brand-terracotta"
+                  className="hover:text-white block py-2 border-b border-white/5 text-brand-orange"
                 >
-                  Planificador a Medida
+                  Tours personalizados
+                </a>
+                <a 
+                  href="#tours" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="hover:text-white block py-2 border-b border-white/5"
+                >
+                  Paquetes
+                </a>
+                <a 
+                  href="#tours" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="hover:text-white block py-2 border-b border-white/5"
+                >
+                  Peru & Galapagos
+                </a>
+                <a 
+                  href="#tours" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="hover:text-white block py-2 border-b border-white/5"
+                >
+                  Peru & Bolivia
                 </a>
                 <a 
                   href="#historia" 
                   onClick={() => setMobileMenuOpen(false)} 
                   className="hover:text-white block py-2 border-b border-white/5"
                 >
-                  Nuestra Filosofía
-                </a>
-                <a 
-                  href="#faq" 
-                  onClick={() => setMobileMenuOpen(false)} 
-                  className="hover:text-white block py-2 border-b border-white/5"
-                >
-                  Dudas Frecuentes
+                  Blog
                 </a>
               </nav>
               <div className="pt-2 flex flex-col space-y-3">
                 <a 
                   href="#planner" 
                   onClick={() => setMobileMenuOpen(false)} 
-                  className="bg-brand-terracotta text-white py-3.5 rounded-sm font-bold text-xs tracking-widest uppercase text-center"
+                  className="bg-brand-orange text-white py-3.5 rounded-sm font-bold text-xs tracking-widest uppercase text-center"
                 >
                   Diseñar Itinerario Gratis
                 </a>
@@ -305,45 +338,33 @@ export default function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-103 motion-safe:animate-[pulse_10s_ease-in-out_infinite]"
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=2000')" 
+            backgroundImage: "url('https://www.boletomachupicchu.com/gutblt/wp-content/uploads/2024/10/machu-picchu-turistas-vista-panoramica-full.jpg')" 
           }}
         ></div>
         
         {/* Soft elegant gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/60 to-brand-charcoal/20"></div>
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-brand-cream to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/50 to-brand-charcoal/20"></div>
+        <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/80 to-transparent"></div>
 
         {/* Content Wrapper */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-24">
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="inline-flex items-center space-x-2 bg-brand-terracotta/20 border border-brand-terracotta/30 text-brand-terracotta px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase mb-6">
-              <Sparkles className="w-3.5 h-3.5 animate-spin-slow mr-1 text-brand-terracotta" />
-              CONCIERGE DE VIAJES & OPERADOR DIRECTO
-            </span>
-          </motion.div>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center text-white pt-24 pb-20">
           
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-serif font-light leading-[1.1] tracking-wide mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold leading-[1.15] tracking-tight mb-6 max-w-4xl mx-auto"
           >
-            Descubre el Perú Real. <br />
-            <span className="italic font-normal text-brand-terracotta">Sin Filtros. Sin Multitudes.</span>
+            ¿Listos para el viaje de su vida a Perú?
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-200 font-light leading-relaxed mb-10"
+            className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-150 font-medium leading-relaxed mb-10"
           >
-            Evitamos el turismo de masa para ofrecerte itinerarios privados y personalizados. Creados meticulosamente por expertos locales y gestionados con rigor y excelencia.
+            Descubran el auténtico Perú, sin multitudes.
           </motion.p>
           
           <motion.div 
@@ -354,60 +375,118 @@ export default function App() {
           >
             <a 
               href="#tours" 
-              className="w-full sm:w-auto bg-brand-terracotta hover:bg-brand-terracotta-dark text-white text-xs font-bold tracking-widest uppercase px-8 py-4.5 rounded-none shadow-xl transition-all duration-300 hover:shadow-brand-terracotta/30"
+              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-sm font-bold tracking-wider px-8 py-4 shadow-xl transition-all duration-300 rounded-none border border-transparent"
               id="hero-primary-cta"
             >
-              Explorar Itinerarios
+              Ver Peru Tours
             </a>
             <a 
               href="#planner" 
-              className="w-full sm:w-auto border border-white/60 hover:border-white hover:bg-white/10 text-white text-xs font-bold tracking-widest uppercase px-8 py-4.5 rounded-none transition-all duration-300"
+              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-sm font-bold tracking-wider px-8 py-4 shadow-xl transition-all duration-300 rounded-none border border-transparent"
               id="hero-secondary-cta"
             >
-              Personalizar Mi Viaje
+              Personaliza mi viaje
             </a>
           </motion.div>
         </div>
       </section>
 
-      {/* 3. TRUST MILESTONES (Bento alignment overlaying hero) */}
-      <section className="relative z-20 max-w-6xl mx-auto px-4 -mt-20 md:-mt-24 mb-24" id="trust-milestones">
-        <div className="bg-brand-charcoal text-white rounded-none p-8 md:p-12 shadow-2xl border border-white/10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 lg:divide-x divide-white/10">
+      {/* 3. TRUST BANNER (Stats & Tripadvisor Awards) */}
+      <section className="bg-[#eae8e2] border-b border-black/[0.04] py-4 sm:py-5 relative z-20" id="trust-milestones">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+          
+          {/* Stats on the left */}
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 w-full lg:w-auto">
             
-            <div className="flex flex-col items-center justify-center text-center p-2 pt-0">
-              <div className="w-10 h-10 bg-brand-terracotta/10 rounded-full flex items-center justify-center text-brand-terracotta mb-3">
-                <Award className="w-6 h-6" />
+            {/* Stat 1 */}
+            <div className="flex items-center space-x-3 text-left">
+              <span className="text-4xl lg:text-5xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">21K+</span>
+              <div className="text-[12px] sm:text-[13px] text-gray-600 font-semibold leading-tight select-none">
+                <div>Clientes</div>
+                <div>felices</div>
               </div>
-              <span className="text-3xl md:text-4xl font-serif font-bold text-brand-terracotta">12+ Años</span>
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-400 mt-2">De experiencia en el terreno</span>
             </div>
 
-            <div className="flex flex-col items-center justify-center text-center p-2 pt-6 sm:pt-0">
-              <div className="w-10 h-10 bg-brand-terracotta/10 rounded-full flex items-center justify-center text-brand-terracotta mb-3">
-                <Compass className="w-6 h-6" />
+            {/* Separator */}
+            <div className="hidden sm:block text-2xl lg:text-3xl font-light text-brand-orange">|</div>
+
+            {/* Stat 2 */}
+            <div className="flex items-center space-x-3 text-left">
+              <span className="text-4xl lg:text-5xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">1,5K+</span>
+              <div className="text-[12px] sm:text-[13px] text-gray-600 font-semibold leading-tight select-none">
+                <div>Reseñas de</div>
+                <div>5 estrellas</div>
               </div>
-              <span className="text-3xl md:text-4xl font-serif font-bold text-brand-terracotta">5K+ Viajes</span>
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-400 mt-2">Itinerarios a medida completados</span>
             </div>
 
-            <div className="flex flex-col items-center justify-center text-center p-2 pt-6 lg:pt-0">
-              <div className="w-10 h-10 bg-brand-terracotta/10 rounded-full flex items-center justify-center text-brand-terracotta mb-3">
-                <Heart className="w-6 h-6" />
-              </div>
-              <span className="text-3xl md:text-4xl font-serif font-bold text-brand-terracotta">98.4%</span>
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-400 mt-2">Valoración Excelente</span>
-            </div>
+            {/* Separator */}
+            <div className="hidden sm:block text-2xl lg:text-3xl font-light text-brand-orange">|</div>
 
-            <div className="flex flex-col items-center justify-center text-center p-2 pt-6 lg:pt-0">
-              <div className="w-10 h-10 bg-brand-terracotta/10 rounded-full flex items-center justify-center text-brand-terracotta mb-3">
-                <ShieldCheck className="w-6 h-6" />
+            {/* Stat 3 */}
+            <div className="flex items-center space-x-3 text-left">
+              <span className="text-4xl lg:text-5xl font-extrabold text-brand-orange tracking-tight leading-none shrink-0">96%</span>
+              <div className="text-[12px] sm:text-[13px] text-gray-600 font-semibold leading-tight select-none">
+                <div>Calificación</div>
+                <div>de</div>
+                <div>excelencia</div>
               </div>
-              <span className="text-3xl md:text-4xl font-serif font-bold text-brand-terracotta">24/7 Soporte</span>
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-400 mt-2">Asistente concierge dedicado</span>
             </div>
 
           </div>
+
+          {/* Tripadvisor Awards on the right */}
+          <div className="flex items-center justify-center lg:justify-end gap-2 sm:gap-3 overflow-x-auto no-scrollbar w-full lg:w-auto py-1">
+            {[2022, 2023, 2024, 2025, 2026].map((year) => (
+              <div key={year} className="flex flex-col items-center text-center shrink-0 w-[72px] sm:w-[78px] select-none">
+                <span className="text-[9px] sm:text-[10px] text-black font-extrabold leading-none tracking-tight">Tripadvisor</span>
+                <span className="text-[8px] sm:text-[9px] text-gray-800 font-medium leading-none tracking-tighter mt-[1px]">Travelers'</span>
+                <span className="text-[8px] sm:text-[9px] text-gray-800 font-medium leading-none tracking-tighter">Choice Awards</span>
+                
+                {/* Tripadvisor custom laurel wreath & owl SVG */}
+                <svg className="w-14 h-14 text-black my-1" viewBox="0 0 100 100" fill="currentColor">
+                  <defs>
+                    <g id={`branch-${year}`}>
+                      {/* Curved stem */}
+                      <path d="M 50 82 C 34 81 24 67 24 50 C 24 41 27 33 33 27" fill="none" stroke="black" strokeWidth="2.5" strokeLinecap="round" />
+                      {/* Leaves along the stem */}
+                      <path d="M 44 80 Q 34 82 32 76 Q 38 73 44 80 Z" />
+                      <path d="M 37 74 Q 26 77 24 70 Q 31 66 37 74 Z" />
+                      <path d="M 31 66 Q 20 69 18 61 Q 25 58 31 66 Z" />
+                      <path d="M 27 57 Q 16 58 15 50 Q 22 49 27 57 Z" />
+                      <path d="M 25 47 Q 15 47 15 39 Q 22 40 25 47 Z" />
+                      <path d="M 26 37 Q 18 34 20 26 Q 25 30 26 37 Z" />
+                      <path d="M 29 28 Q 23 22 27 15 Q 30 21 29 28 Z" />
+                    </g>
+                  </defs>
+                  {/* Left Branch */}
+                  <use href={`#branch-${year}`} />
+                  {/* Right Branch (flipped horizontally) */}
+                  <use href={`#branch-${year}`} transform="translate(100, 0) scale(-1, 1)" />
+                  
+                  {/* Inner Circle */}
+                  <circle cx="50" cy="48" r="17" fill="none" stroke="black" strokeWidth="3" />
+                  
+                  {/* Owl Head inside */}
+                  {/* Left Eye */}
+                  <circle cx="44.5" cy="48" r="5" fill="white" stroke="black" strokeWidth="1.8" />
+                  <circle cx="44.5" cy="48" r="2.5" fill="black" />
+                  
+                  {/* Right Eye */}
+                  <circle cx="55.5" cy="48" r="5" fill="white" stroke="black" strokeWidth="1.8" />
+                  <circle cx="55.5" cy="48" r="2.5" fill="black" />
+                  
+                  {/* Brow */}
+                  <path d="M 38 42.5 Q 44.5 39 50 42.5 Q 55.5 39 62 42.5" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" />
+                  
+                  {/* Beak */}
+                  <path d="M 48.5 49 L 51.5 49 L 50 53 Z" fill="black" />
+                </svg>
+                
+                <span className="text-[9px] sm:text-[10px] text-black font-extrabold leading-none tracking-tight mt-0.5">{year}</span>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
@@ -720,7 +799,7 @@ export default function App() {
           
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold tracking-[0.3em] text-brand-terracotta uppercase">TESTIMONIOS REALES DESDE EL ALMA</span>
-            <h2 class="text-3xl sm:text-4xl font-serif font-light text-brand-charcoal mt-2">La Experiencia InsideOut</h2>
+            <h2 className="text-3xl sm:text-4xl font-serif font-light text-brand-charcoal mt-2">La Experiencia InsideOut</h2>
             <div className="w-12 h-0.5 bg-brand-terracotta mx-auto mt-4"></div>
           </div>
 
@@ -1379,19 +1458,23 @@ export default function App() {
           
           {/* Column 1: Brand Info & Mission Statement */}
           <div className="space-y-4" id="footer-brand-col">
-            <a href="#" className="flex flex-col font-sans text-white tracking-widest select-none cursor-pointer" id="footer-logo">
-              <div className="flex items-baseline text-lg md:text-xl font-extrabold tracking-[0.22em]">
+            <a href="#" className="flex flex-col text-white select-none leading-none group" id="footer-logo">
+              <div className="text-xl font-extrabold tracking-[0.22em] flex items-end">
                 <span>PER</span>
-                <span className="border-b-2 border-brand-terracotta pb-0.5">U</span>
+                <span className="relative inline-block">
+                  U
+                  <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-white group-hover:bg-brand-orange transition-colors"></span>
+                </span>
               </div>
-              <div className="flex items-center text-xs font-semibold tracking-[0.16em] mt-0.5 text-gray-300">
-                <span>INSIDE<span>
-                <svg className="w-2.5 h-2.5 mx-1 text-brand-terracotta fill-current shrink-0" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
+              <div className="text-[10px] font-bold tracking-[0.16em] flex items-center mt-1 text-white/90">
+                <span>INSIDE</span>
+                <span className="mx-1 text-[9px] font-bold text-white/95 group-hover:translate-x-0.5 transition-transform shrink-0">&gt;</span>
                 <span>O</span>
-                <span className="border-b border-brand-terracotta pb-px">U</span>
-                <span>T</span></span></span>
+                <span className="relative inline-block">
+                  U
+                  <span className="absolute left-0 right-0 bottom-[-2px] h-[1.5px] bg-white/90 group-hover:bg-brand-orange transition-colors"></span>
+                </span>
+                <span>T</span>
               </div>
             </a>
             <p className="text-[11px] leading-relaxed text-gray-400 font-light">
