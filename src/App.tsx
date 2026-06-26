@@ -42,14 +42,15 @@ interface QuienesSomosPageProps {
 function QuienesSomosPage({ navigateTo }: QuienesSomosPageProps) {
   return (
     <div className="bg-white min-h-screen">
-      {/* 1. HERO BANNER (Wine background #571224) */}
-      <div className="relative pt-64 pb-48 sm:pt-80 sm:pb-64 bg-[#571224] text-white overflow-hidden">
-        {/* Subtle background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-[#571224]/95 z-0"></div>
+      {/* 1. HERO BANNER (Photo background) */}
+      <div className="relative pt-24 pb-8 sm:pt-28 sm:pb-10 text-white overflow-hidden bg-brand-charcoal" style={{ minHeight: '35vh' }}>
+        {/* Full background image */}
         <div 
-          className="absolute inset-0 opacity-15 bg-cover bg-center mix-blend-overlay z-0" 
+          className="absolute inset-0 bg-cover bg-center z-0" 
           style={{ backgroundImage: "url('/sobrenosotros-insideout.jpeg')" }}
         ></div>
+        {/* Dark wine gradient overlay for premium look & excellent readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#571224]/90 via-[#571224]/75 to-black/60 z-0"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10">
           <motion.span 
@@ -64,7 +65,7 @@ function QuienesSomosPage({ navigateTo }: QuienesSomosPageProps) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-sans font-extrabold tracking-tight mb-4"
+            className="text-4xl sm:text-5xl lg:text-6xl font-sans font-extrabold tracking-tight mb-2"
           >
             Quiénes Somos
           </motion.h1>
@@ -72,7 +73,7 @@ function QuienesSomosPage({ navigateTo }: QuienesSomosPageProps) {
       </div>
 
       {/* 2. NUESTRA HISTORIA & SIGNIFICADO DE PERÚ INSIDEOUT (White background #FFFFFF) */}
-      <section className="py-24 bg-white">
+      <section className="pt-10 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl space-y-20 text-left">
             
@@ -111,45 +112,128 @@ function QuienesSomosPage({ navigateTo }: QuienesSomosPageProps) {
         </div>
       </section>
 
-      {/* 3. QUIÉN ESTÁ DETRÁS DE PERÚ INSIDEOUT (Deep wine background #571224) */}
-      <section className="py-24 bg-[#571224] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      {/* 3. NUESTRO EQUIPO EN PERÚ */}
+      <section className="py-20 bg-[#571224] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left mb-12">
+          <span className="text-xs font-bold uppercase tracking-widest text-white/70 block mb-2">
+            Presencia Local
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-extrabold tracking-tight">
+            Nuestro Equipo en Perú
+          </h2>
+          <p className="text-white/80 mt-4 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+            Nuestros especialistas en viajes, coordinadores de operaciones y guías locales expertos están basados en las ciudades clave del país para asegurar un servicio concierge impecable.
+          </p>
+        </div>
+
+        {/* Stacked City Banners like the user photo */}
+        <div className="w-full flex flex-col space-y-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Lima Card */}
+          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] overflow-hidden group select-none">
+            {/* Background Image */}
+            <img 
+              src="/lima.png" 
+              alt="Nuestro equipo en Lima" 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            {/* Elegant dark gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/40 to-transparent"></div>
             
-            {/* Left: Founder photo */}
-            <div className="lg:col-span-4 flex justify-start lg:justify-center">
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
-                <img 
-                  src="/gerentePIO.jpg" 
-                  alt="Roberto - Fundador de Perú InsideOut" 
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-            </div>
-
-            {/* Right: Bio details */}
-            <div className="lg:col-span-8 space-y-6 text-left">
-              <span className="text-xs font-bold uppercase tracking-widest text-white/70">
-                El Fundador
+            {/* Top Right Label & Icon */}
+            <div className="absolute top-6 right-6 flex items-center space-x-3 z-10">
+              <span className="bg-black/60 backdrop-blur-xs text-[10px] font-bold tracking-wider uppercase text-white px-3 py-1 rounded-full border border-white/10">
+                Lima
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight font-sans">
-                Quién está detrás de Perú InsideOut
-              </h2>
-              
-              <div className="space-y-4 text-white/90 text-sm sm:text-base leading-relaxed font-light font-sans">
-                <p>
-                  Mi nombre es Roberto, fundador de Perú InsideOut. Soy italiano de nacimiento y he realizado estudios de posgrado en Italia y Francia. A lo largo de mi trayectoria he vivido y trabajado en Londres, Bruselas, Roma, París, Perth y Sídney, y desde octubre de 2010 resido en Lima, Perú.
-                </p>
-                <p>
-                  Hablo cuatro idiomas: italiano, inglés, francés y español, y he viajado extensamente por Bolivia, Chile y Argentina, lo que me ha permitido comprender Sudamérica desde una perspectiva cultural amplia, cercana y respetuosa.
-                </p>
-                <p>
-                  Esta combinación de experiencia internacional y conocimiento local es la base de la calidad y el enfoque de cada viaje que diseñamos. Desde el inicio, el sur del Perú se convirtió en el corazón del proyecto: una región auténtica, profunda y cercana, que conocíamos bien y que queríamos compartir con el mundo a través de viajes personalizados y experiencias reales.
-                </p>
-              </div>
+              <Heart className="w-5 h-5 text-white/90 cursor-pointer hover:text-red-500 transition-colors" />
             </div>
 
+            {/* Right Aligned Content Block */}
+            <div className="absolute inset-y-0 right-12 flex flex-col justify-center items-end text-right z-10 text-white max-w-md">
+              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2">
+                Lima
+              </h3>
+              <p className="text-sm sm:text-base font-light text-gray-200 leading-relaxed">
+                Asistencia concierge, logística internacional y operaciones de primer nivel.
+              </p>
+            </div>
+
+            {/* Bottom Right Arrow */}
+            <div className="absolute bottom-6 right-12 z-10 text-white/80 hover:text-white transition-colors cursor-pointer group-hover:translate-x-1 duration-300">
+              <ArrowRight className="w-6 h-6 border border-white/20 rounded-full p-1 w-8 h-8 flex items-center justify-center bg-black/35 hover:bg-black/60" />
+            </div>
           </div>
+
+          {/* Arequipa Card */}
+          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] overflow-hidden group select-none">
+            {/* Background Image */}
+            <img 
+              src="/arequipa.png" 
+              alt="Nuestro equipo en Arequipa" 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            {/* Elegant dark gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/40 to-transparent"></div>
+            
+            {/* Top Right Label & Icon */}
+            <div className="absolute top-6 right-6 flex items-center space-x-3 z-10">
+              <span className="bg-black/60 backdrop-blur-xs text-[10px] font-bold tracking-wider uppercase text-white px-3 py-1 rounded-full border border-white/10">
+                Arequipa
+              </span>
+              <Heart className="w-5 h-5 text-white/90 cursor-pointer hover:text-red-500 transition-colors" />
+            </div>
+
+            {/* Right Aligned Content Block */}
+            <div className="absolute inset-y-0 right-12 flex flex-col justify-center items-end text-right z-10 text-white max-w-md">
+              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2">
+                Arequipa
+              </h3>
+              <p className="text-sm sm:text-base font-light text-gray-200 leading-relaxed">
+                El corazón de nuestro inicio, coordinando rutas por el Cañón del Colca y el sur andino.
+              </p>
+            </div>
+
+            {/* Bottom Right Arrow */}
+            <div className="absolute bottom-6 right-12 z-10 text-white/80 hover:text-white transition-colors cursor-pointer group-hover:translate-x-1 duration-300">
+              <ArrowRight className="w-6 h-6 border border-white/20 rounded-full p-1 w-8 h-8 flex items-center justify-center bg-black/35 hover:bg-black/60" />
+            </div>
+          </div>
+
+          {/* Cusco Card */}
+          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] overflow-hidden group select-none">
+            {/* Background Image */}
+            <img 
+              src="/cusco.png" 
+              alt="Nuestro equipo en Cusco" 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            {/* Elegant dark gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/45 to-transparent"></div>
+            
+            {/* Top Right Label & Icon */}
+            <div className="absolute top-6 right-6 flex items-center space-x-3 z-10">
+              <span className="bg-black/60 backdrop-blur-xs text-[10px] font-bold tracking-wider uppercase text-white px-3 py-1 rounded-full border border-white/10">
+                Cusco
+              </span>
+              <Heart className="w-5 h-5 text-white/90 cursor-pointer hover:text-red-500 transition-colors" />
+            </div>
+
+            {/* Right Aligned Content Block */}
+            <div className="absolute inset-y-0 right-12 flex flex-col justify-center items-end text-right z-10 text-white max-w-md">
+              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2">
+                CUZCO
+              </h3>
+              <p className="text-sm sm:text-base font-light text-gray-200 leading-relaxed">
+                Nuestros guías expertos de montaña, especialistas en arqueología y coordinadores locales.
+              </p>
+            </div>
+
+            {/* Bottom Right Arrow */}
+            <div className="absolute bottom-6 right-12 z-10 text-white/80 hover:text-white transition-colors cursor-pointer group-hover:translate-x-1 duration-300">
+              <ArrowRight className="w-6 h-6 border border-white/20 rounded-full p-1 w-8 h-8 flex items-center justify-center bg-black/35 hover:bg-black/60" />
+            </div>
+          </div>
+
         </div>
       </section>
 
