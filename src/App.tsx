@@ -35,7 +35,183 @@ import { Tour, FAQItem, Testimonial, PlannerState } from './types';
 import { TOURS_DATA, TESTIMONIALS_DATA, FAQ_DATA } from './data';
 import llamaImage from '../assets/peru_tour_llama_teepee.png';
 
+interface QuienesSomosPageProps {
+  navigateTo: (path: string) => void;
+}
+
+function QuienesSomosPage({ navigateTo }: QuienesSomosPageProps) {
+  return (
+    <div className="bg-white min-h-screen">
+      {/* 1. HERO BANNER (Wine background #571224) */}
+      <div className="relative pt-64 pb-48 sm:pt-80 sm:pb-64 bg-[#571224] text-white overflow-hidden">
+        {/* Subtle background overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-[#571224]/95 z-0"></div>
+        <div 
+          className="absolute inset-0 opacity-15 bg-cover bg-center mix-blend-overlay z-0" 
+          style={{ backgroundImage: "url('/sobrenosotros-insideout.jpeg')" }}
+        ></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10">
+          <motion.span 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-white/80 mb-3"
+          >
+            Filosofía & Trayectoria
+          </motion.span>
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-sans font-extrabold tracking-tight mb-4"
+          >
+            Quiénes Somos
+          </motion.h1>
+        </div>
+      </div>
+
+      {/* 2. NUESTRA HISTORIA & SIGNIFICADO DE PERÚ INSIDEOUT (White background #FFFFFF) */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl space-y-20 text-left">
+            
+            {/* Nuestra Historia */}
+            <div className="space-y-6">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#571224]">
+                Nuestra Historia
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#571224] tracking-tight font-sans">
+                Nuestra Historia: Todo comenzó en Arequipa
+              </h2>
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed font-light font-sans">
+                Perú InsideOut nació, curiosamente, en un café de Arequipa, al sur del Perú. Fue allí donde surgió la idea de crear una agencia de viajes diferente, capaz de mostrar el Perú desde dentro hacia fuera, conectando a los viajeros con su alma, su cultura y su gente, sin perder la precisión, el cuidado y la visión europea en la organización.
+              </p>
+            </div>
+
+            {/* El significado */}
+            <div className="space-y-6 pt-16 border-t border-gray-100">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#571224]">
+                Nuestra Filosofía
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#571224] tracking-tight font-sans">
+                El significado de Perú InsideOut
+              </h2>
+              <div className="space-y-6 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed font-light font-sans">
+                <p>
+                  Encontrar el nombre adecuado no fue sencillo. Tras días de ideas, conversaciones y pruebas, junto a un amigo nació <strong>Perú InsideOut</strong>: una manera de expresar nuestra filosofía de viaje, basada en descubrir el Perú más allá de lo superficial, viviendo experiencias auténticas, personales y culturales, lejos del turismo masivo.
+                </p>
+                <p className="border-l-4 border-[#571224] pl-4 italic text-[#571224] font-medium font-sans">
+                  Viajar con Perú InsideOut significa comprender el país desde adentro, conectando con sus tradiciones, su historia y su identidad.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 3. QUIÉN ESTÁ DETRÁS DE PERÚ INSIDEOUT (Deep wine background #571224) */}
+      <section className="py-24 bg-[#571224] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left: Founder photo */}
+            <div className="lg:col-span-4 flex justify-start lg:justify-center">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
+                <img 
+                  src="/gerentePIO.jpg" 
+                  alt="Roberto - Fundador de Perú InsideOut" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+            </div>
+
+            {/* Right: Bio details */}
+            <div className="lg:col-span-8 space-y-6 text-left">
+              <span className="text-xs font-bold uppercase tracking-widest text-white/70">
+                El Fundador
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight font-sans">
+                Quién está detrás de Perú InsideOut
+              </h2>
+              
+              <div className="space-y-4 text-white/90 text-sm sm:text-base leading-relaxed font-light font-sans">
+                <p>
+                  Mi nombre es Roberto, fundador de Perú InsideOut. Soy italiano de nacimiento y he realizado estudios de posgrado en Italia y Francia. A lo largo de mi trayectoria he vivido y trabajado en Londres, Bruselas, Roma, París, Perth y Sídney, y desde octubre de 2010 resido en Lima, Perú.
+                </p>
+                <p>
+                  Hablo cuatro idiomas: italiano, inglés, francés y español, y he viajado extensamente por Bolivia, Chile y Argentina, lo que me ha permitido comprender Sudamérica desde una perspectiva cultural amplia, cercana y respetuosa.
+                </p>
+                <p>
+                  Esta combinación de experiencia internacional y conocimiento local es la base de la calidad y el enfoque de cada viaje que diseñamos. Desde el inicio, el sur del Perú se convirtió en el corazón del proyecto: una región auténtica, profunda y cercana, que conocíamos bien y que queríamos compartir con el mundo a través de viajes personalizados y experiencias reales.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 4. NUESTRA MISIÓN (White background #FFFFFF) */}
+      <section className="py-24 bg-white text-[#571224]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+          <div className="max-w-4xl space-y-6">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#571224]/60 font-sans block">
+              Nuestra Misión
+            </span>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-sans font-bold leading-relaxed text-[#571224]">
+              En Perú InsideOut creemos que viajar es entender, sentir y conectar. Por eso compartimos con nuestros viajeros un Perú misterioso, auténtico y siempre cautivante, diseñado con respeto, pasión y profundo conocimiento del país.
+            </h2>
+            <div className="h-1 w-16 bg-[#571224] rounded-full mt-4"></div>
+            
+            {/* Back to Home CTA */}
+            <div className="pt-12">
+              <button 
+                onClick={() => navigateTo('/')}
+                className="inline-block bg-[#571224] hover:bg-[#400a18] text-white font-bold text-xs uppercase tracking-widest px-8 py-4 transition-all duration-300 rounded-none cursor-pointer hover:shadow-xl hover:scale-[1.02] active:scale-95 duration-150"
+              >
+                Volver al inicio
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 export default function App() {
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateTo = (path: string) => {
+    window.history.pushState({}, '', path);
+    setCurrentPath(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    if (currentPath !== '/') {
+      e.preventDefault();
+      window.history.pushState({}, '', '/' + target);
+      setCurrentPath('/');
+      setTimeout(() => {
+        const element = document.getElementById(target.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
   // Scroll detection for sticky navigation bar
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -143,7 +319,7 @@ export default function App() {
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-16' : 'h-20'}`}>
           
           {/* LOGO: Peru InsideOut matching custom design from screenshot */}
-          <a href="#" className={`flex flex-col select-none leading-none group transition-colors duration-300 ${isScrolled ? 'text-brand-orange animate-pulse-slow' : 'text-white'}`} id="logo-header">
+          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }} className={`flex flex-col select-none leading-none group transition-colors duration-300 ${isScrolled ? 'text-brand-orange animate-pulse-slow' : 'text-white'}`} id="logo-header">
             <div className="text-2xl sm:text-3xl font-extrabold tracking-[0.22em] flex items-end">
               <span>PER</span>
               <span className="relative inline-block">
@@ -276,71 +452,16 @@ export default function App() {
               </div>
             </div>
             <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-brand-orange transition-colors duration-200">Destinos</a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-brand-orange transition-colors duration-200">Oferta Especial</a>
-            <div className="relative group flex items-center h-full py-4">
-              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-brand-orange transition-colors duration-200 flex items-center space-x-1">
-                <span>Quienes Somos</span>
-                <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
-              </a>
-              
-              {/* Dropdown Menu */}
-              <div className="absolute top-[80%] right-0 w-72 bg-white text-brand-charcoal shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 p-6 border-t-2 border-[#571224] border-x border-b border-black/[0.06] select-none">
-                <div className="space-y-6">
-                  {/* Category 1 */}
-                  <div>
-                    <h4 className="text-[10px] tracking-widest font-extrabold text-[#571224] uppercase mb-3 text-left">
-                      Quienes Somos
-                    </h4>
-                    <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
-                      <li>
-                        <a href="#historia" className="hover:text-[#571224] transition-colors duration-150 block">
-                          Nuestra Historia
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20turismo%20responsable%20en%20Perú" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
-                          Turismo responsable en Peru
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20saber%20lo%20que%20hablan%20de%20nosotros" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
-                          Hablan de nosotros
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#trust-milestones" className="hover:text-[#571224] transition-colors duration-150 block">
-                          Testimonios
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#lecturas" className="hover:text-[#571224] transition-colors duration-150 block">
-                          Blog
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Category 2 */}
-                  <div>
-                    <h4 className="text-[10px] tracking-widest font-extrabold text-[#571224] uppercase mb-3 text-left">
-                      Contacto
-                    </h4>
-                    <ul className="space-y-2.5 font-semibold normal-case text-[13px] text-brand-charcoal/90 text-left">
-                      <li>
-                        <a href="#contacto" className="hover:text-[#571224] transition-colors duration-150 block">
-                          Contacto
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://wa.me/51999999999?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener noreferrer" className="hover:text-[#571224] transition-colors duration-150 block">
-                          Reservas
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a 
+              href="/quienes-somos" 
+              onClick={(e) => { e.preventDefault(); navigateTo('/quienes-somos'); }} 
+              className="hover:text-brand-orange transition-colors duration-200"
+            >
+              Quienes Somos
+            </a>
+            <a href="#contacto" onClick={(e) => handleAnchorClick(e, '#contacto')} className="hover:text-brand-orange transition-colors duration-200">
+              Personalizar mi viaje
+            </a>
           </nav>
 
           {/* MOBILE MENU TRIGGER */}
@@ -451,61 +572,24 @@ export default function App() {
                   Destinos
                 </a>
                 <a 
-                  href="#" 
-                  onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); }} 
+                  href="#contacto" 
+                  onClick={(e) => { setMobileMenuOpen(false); handleAnchorClick(e, '#contacto'); }} 
                   className="hover:text-white block py-2 border-b border-white/5"
                 >
-                  Oferta Especial
+                  Personalizar mi viaje
                 </a>
-                <div>
-                  <button 
-                    onClick={() => setMobileQuienesSomosOpen(!mobileQuienesSomosOpen)} 
-                    className="hover:text-white w-full text-left flex items-center justify-between py-2 border-b border-white/5 focus:outline-none"
-                  >
-                    <span>Quienes Somos</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileQuienesSomosOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  {mobileQuienesSomosOpen && (
-                    <div className="pl-4 py-2 space-y-4 bg-black/10 mt-1 rounded-xs">
-                      <div className="space-y-2">
-                        <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
-                          Quienes Somos
-                        </span>
-                        <a href="#historia" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
-                          Nuestra Historia
-                        </a>
-                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20turismo%20responsable%20en%20Perú" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
-                          Turismo responsable en Peru
-                        </a>
-                        <a href="https://wa.me/51999999999?text=Hola,%20me%20gustaría%20saber%20lo%20que%20hablan%20de%20nosotros" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
-                          Hablan de nosotros
-                        </a>
-                        <a href="#trust-milestones" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
-                          Testimonios
-                        </a>
-                        <a href="#lecturas" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
-                          Blog
-                        </a>
-                      </div>
-                      <div className="space-y-2 pt-2 border-t border-white/5">
-                        <span className="text-[10px] tracking-widest font-extrabold text-[#f15a24] uppercase block text-left">
-                          Contacto
-                        </span>
-                        <a href="#contacto" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
-                          Contacto
-                        </a>
-                        <a href="https://wa.me/51999999999?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#f15a24] block py-1.5 text-xs font-semibold normal-case text-gray-300 text-left">
-                          Reservas
-                        </a>
-                      </div>
-                    </div>
-                  )}
-                </div>
+                <a 
+                  href="/quienes-somos" 
+                  onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); navigateTo('/quienes-somos'); }} 
+                  className="hover:text-white block py-2 border-b border-white/5"
+                >
+                  Quienes Somos
+                </a>
               </nav>
               <div className="pt-2 flex flex-col space-y-3">
                 <a 
                   href="#contacto" 
-                  onClick={() => setMobileMenuOpen(false)} 
+                  onClick={(e) => { setMobileMenuOpen(false); handleAnchorClick(e, '#contacto'); }} 
                   className="bg-brand-orange text-white py-3.5 rounded-sm font-bold text-xs tracking-widest uppercase text-center"
                 >
                   Diseñar Itinerario Gratis
@@ -524,15 +608,21 @@ export default function App() {
         </AnimatePresence>
       </header>
 
-      {/* 2. HERO SECTION */}
-      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden" id="hero-section">
-        {/* Cinematic high-quality background picture of Machu Picchu */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: "url('https://andinoperu.b-cdn.net/wp-content/uploads/2024/03/razones-para-visitar-machu-picchu.webp')" 
-          }}
-        ></div>
+      {currentPath === '/quienes-somos' ? (
+        <QuienesSomosPage navigateTo={navigateTo} />
+      ) : (
+        <>
+          {/* 2. HERO SECTION */}
+          <section className="relative min-h-screen flex flex-col justify-between overflow-hidden" id="hero-section">
+        {/* Cinematic high-quality background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/herovideo.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
 
         {/* Soft elegant gradient overlays: Left-to-right on desktop to keep the right side (tourists/landscape) 100% visible and natural */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent hidden md:block"></div>
@@ -567,17 +657,19 @@ export default function App() {
           >
             <a 
               href="#tours" 
-              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-xs font-bold tracking-wider px-8 py-3.5 shadow-xl transition-all duration-300 rounded-none border border-transparent text-center"
+              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-xs font-bold tracking-wider px-8 py-3.5 shadow-xl transition-all duration-300 rounded-none border border-transparent text-center flex items-center justify-center gap-2 hover:scale-[1.03] active:scale-95 duration-150"
               id="hero-primary-cta"
             >
-              Ver Peru Tours
+              <span>Ver Peru Tours</span>
+              <ArrowRight className="w-4 h-4" />
             </a>
             <a 
               href="#contacto" 
-              className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white text-xs font-bold tracking-wider px-8 py-3.5 shadow-xl transition-all duration-300 rounded-none border border-transparent text-center"
+              className="w-full sm:w-auto border border-white bg-white/10 backdrop-blur-xs hover:bg-white hover:text-brand-charcoal text-white text-xs font-bold tracking-wider px-8 py-3.5 shadow-xl transition-all duration-300 rounded-none text-center flex items-center justify-center gap-2 hover:scale-[1.03] active:scale-95 duration-150"
               id="hero-secondary-cta"
             >
-              Personaliza mi viaje
+              <span>Personaliza mi viaje</span>
+              <Sliders className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
@@ -1258,6 +1350,8 @@ export default function App() {
 
         </div>
       </section>
+        </>
+      )}
 
       {/* 11. FOOTER IN PERU INSIDEOUT LIGHT STYLE */}
       <footer className="bg-white text-brand-charcoal pt-16 pb-8 border-t border-black/[0.06] font-sans" id="main-footer">
@@ -1332,21 +1426,21 @@ export default function App() {
             <div className="space-y-4">
               <h4 className="text-base font-bold text-brand-charcoal">Info</h4>
               <ul className="space-y-2 text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                <li><a href="#lecturas" className="hover:text-brand-orange transition-colors">Blog</a></li>
-                <li><a href="#historia" className="hover:text-brand-orange transition-colors">Quiénes Somos</a></li>
-                <li><a href="#tours" className="hover:text-brand-orange transition-colors">Destinos</a></li>
-                <li><a href="#metodo" className="hover:text-brand-orange transition-colors normal-case">Sostenibilidad y Turismo Responsable en Perú</a></li>
-                <li><a href="#historia" className="hover:text-brand-orange transition-colors normal-case">Proyecto Social de Perú InsideOut</a></li>
+                <li><a href="#lecturas" onClick={(e) => handleAnchorClick(e, '#lecturas')} className="hover:text-brand-orange transition-colors">Blog</a></li>
+                <li><a href="/quienes-somos" onClick={(e) => { e.preventDefault(); navigateTo('/quienes-somos'); }} className="hover:text-brand-orange transition-colors">Quiénes Somos</a></li>
+                <li><a href="#tours" onClick={(e) => handleAnchorClick(e, '#tours')} className="hover:text-brand-orange transition-colors">Destinos</a></li>
+                <li><a href="#metodo" onClick={(e) => handleAnchorClick(e, '#metodo')} className="hover:text-brand-orange transition-colors normal-case">Sostenibilidad y Turismo Responsable en Perú</a></li>
+                <li><a href="#historia" onClick={(e) => handleAnchorClick(e, '#historia')} className="hover:text-brand-orange transition-colors normal-case">Proyecto Social de Perú InsideOut</a></li>
               </ul>
             </div>
             {/* Column 2: General */}
             <div className="space-y-4">
               <h4 className="text-base font-bold text-brand-charcoal">General</h4>
               <ul className="space-y-2 text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                <li><a href="#faq" className="hover:text-brand-orange transition-colors">Preguntas frecuentes</a></li>
-                <li><a href="#contacto" className="hover:text-brand-orange transition-colors">Contáctanos</a></li>
-                <li><a href="#trust-milestones" className="hover:text-brand-orange transition-colors">Reseñas</a></li>
-                <li><a href="#contacto" className="hover:text-brand-orange transition-colors">Libro de Reclamaciones</a></li>
+                <li><a href="#faq" onClick={(e) => handleAnchorClick(e, '#faq')} className="hover:text-brand-orange transition-colors">Preguntas frecuentes</a></li>
+                <li><a href="#contacto" onClick={(e) => handleAnchorClick(e, '#contacto')} className="hover:text-brand-orange transition-colors">Contáctanos</a></li>
+                <li><a href="#trust-milestones" onClick={(e) => handleAnchorClick(e, '#trust-milestones')} className="hover:text-brand-orange transition-colors">Reseñas</a></li>
+                <li><a href="#contacto" onClick={(e) => handleAnchorClick(e, '#contacto')} className="hover:text-brand-orange transition-colors">Libro de Reclamaciones</a></li>
                 <li><a href="#" className="hover:text-brand-orange transition-colors">Política de Privacidad</a></li>
                 <li><a href="#" className="hover:text-brand-orange transition-colors">Términos y Condiciones</a></li>
               </ul>
@@ -1355,14 +1449,14 @@ export default function App() {
             <div className="space-y-4">
               <h4 className="text-base font-bold text-brand-charcoal">Los más populares</h4>
               <ul className="space-y-2 text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                <li><a href="#tours" className="hover:text-brand-orange transition-colors">8D Maravillas Peruanas</a></li>
-                <li><a href="#tours" className="hover:text-brand-orange transition-colors">8D Tour Culinario</a></li>
-                <li><a href="#tours" className="hover:text-brand-orange transition-colors">8D Tour Auténtico</a></li>
-                <li><a href="#tours" className="hover:text-brand-orange transition-colors">12D Aventura Épica</a></li>
-                <li><a href="#contacto" className="hover:text-brand-orange transition-colors">Tours Personalizados</a></li>
-                <li><a href="#tours" className="hover:text-brand-orange transition-colors">Tours a Peru</a></li>
-                <li><a href="#tours" className="hover:text-brand-orange transition-colors">Machu Picchu Tours</a></li>
-                <li><a href="#tours" className="hover:text-brand-orange transition-colors">Full Days</a></li>
+                <li><a href="#tours" onClick={(e) => handleAnchorClick(e, '#tours')} className="hover:text-brand-orange transition-colors">8D Maravillas Peruanas</a></li>
+                <li><a href="#tours" onClick={(e) => handleAnchorClick(e, '#tours')} className="hover:text-brand-orange transition-colors">8D Tour Culinario</a></li>
+                <li><a href="#tours" onClick={(e) => handleAnchorClick(e, '#tours')} className="hover:text-brand-orange transition-colors">8D Tour Auténtico</a></li>
+                <li><a href="#tours" onClick={(e) => handleAnchorClick(e, '#tours')} className="hover:text-brand-orange transition-colors">12D Aventura Épica</a></li>
+                <li><a href="#contacto" onClick={(e) => handleAnchorClick(e, '#contacto')} className="hover:text-brand-orange transition-colors">Tours Personalizados</a></li>
+                <li><a href="#tours" onClick={(e) => handleAnchorClick(e, '#tours')} className="hover:text-brand-orange transition-colors">Tours a Peru</a></li>
+                <li><a href="#tours" onClick={(e) => handleAnchorClick(e, '#tours')} className="hover:text-brand-orange transition-colors">Machu Picchu Tours</a></li>
+                <li><a href="#tours" onClick={(e) => handleAnchorClick(e, '#tours')} className="hover:text-brand-orange transition-colors">Full Days</a></li>
               </ul>
             </div>
           </div>
