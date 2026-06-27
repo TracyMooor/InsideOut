@@ -43,16 +43,16 @@ function QuienesSomosPage({ navigateTo }: QuienesSomosPageProps) {
   return (
     <div className="bg-white min-h-screen">
       {/* 1. HERO BANNER (Photo background) */}
-      <div className="relative pt-24 pb-8 sm:pt-28 sm:pb-10 text-white overflow-hidden bg-brand-charcoal" style={{ minHeight: '35vh' }}>
+      <div className="relative pt-28 pb-12 sm:pt-32 sm:pb-16 text-white overflow-hidden bg-brand-charcoal flex items-center" style={{ minHeight: '50vh' }}>
         {/* Full background image */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0" 
           style={{ backgroundImage: "url('/sobrenosotros-insideout.jpeg')" }}
         ></div>
-        {/* Dark wine gradient overlay for premium look & excellent readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#571224]/90 via-[#571224]/75 to-black/60 z-0"></div>
+        {/* Soft dark gradient overlay to ensure text readability on the left while letting the original image colors show on the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-0"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10">
           <motion.span 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
