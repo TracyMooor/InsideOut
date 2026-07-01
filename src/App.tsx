@@ -312,6 +312,7 @@ export default function App() {
   const [mobilePeruOpen, setMobilePeruOpen] = useState(false);
   const [mobileSudamericaOpen, setMobileSudamericaOpen] = useState(false);
   const [mobileQuienesSomosOpen, setMobileQuienesSomosOpen] = useState(false);
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
 
   // Active filter category for tours
   const [activeTourCategory, setActiveTourCategory] = useState<string>('all');
@@ -360,7 +361,7 @@ export default function App() {
       <header id="header" className={`top-0 left-0 w-full z-50 transition-all duration-350 ${isScrolled ? 'fixed bg-white shadow-md border-b border-black/[0.06] py-1 text-brand-charcoal' : 'absolute bg-gradient-to-b from-black/85 via-black/45 to-transparent text-white'}`}>
 
         {/* Top Info Bar */}
-        <div className={`border-b transition-colors duration-300 overflow-hidden max-h-12 opacity-100 ${isScrolled ? 'border-black/[0.06]' : 'border-white/10'}`}>
+        <div className={`border-b transition-colors duration-300 overflow-visible max-h-none opacity-100 ${isScrolled ? 'border-black/[0.06]' : 'border-white/10'}`}>
           <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-[11px] sm:text-xs transition-colors duration-300 ${isScrolled ? 'text-gray-600' : 'text-white/90'}`}>
 
             {/* Left side: phone & email */}
@@ -382,9 +383,34 @@ export default function App() {
 
             {/* Right side: language & CTA box */}
             <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-1 cursor-pointer hover:text-brand-orange transition-colors group">
-                <span className="font-bold uppercase tracking-wider">ES</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform group-hover:rotate-180 ${isScrolled ? 'text-brand-charcoal' : 'text-white'}`} />
+              <div className="relative z-50">
+                <button
+                  type="button"
+                  onClick={() => setLanguageMenuOpen((prev) => !prev)}
+                  className="flex items-center space-x-1 cursor-pointer hover:text-brand-orange transition-colors group"
+                >
+                  <span className="font-bold uppercase tracking-wider">ES</span>
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform ${languageMenuOpen ? 'rotate-180' : ''} ${isScrolled ? 'text-brand-charcoal' : 'text-white'}`} />
+                </button>
+
+                {languageMenuOpen && (
+                  <div className="absolute right-0 top-full mt-3 min-w-[180px] rounded-xl border border-black/[0.08] bg-white shadow-[0_22px_75px_-25px_rgba(0,0,0,0.35)] py-2 z-[60] overflow-hidden">
+                    <button
+                      type="button"
+                      onClick={() => setLanguageMenuOpen(false)}
+                      className="block w-full px-4 py-3 text-left text-sm font-semibold uppercase text-brand-charcoal hover:bg-slate-50 transition-colors duration-150"
+                    >
+                      IT
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setLanguageMenuOpen(false)}
+                      className="block w-full px-4 py-3 text-left text-sm font-semibold uppercase text-brand-charcoal hover:bg-slate-50 transition-colors duration-150"
+                    >
+                      EN
+                    </button>
+                  </div>
+                )}
               </div>
               <a
                 href="https://wa.me/51999999999"
